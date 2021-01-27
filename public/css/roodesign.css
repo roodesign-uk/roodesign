@@ -1,0 +1,20 @@
+:root {
+  --homepage-square-scale: 1;
+}
+body {
+  background-color: #7B05E2;
+  margin: 0;
+  overflow-x: hidden;
+}
+#square {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 10vw;
+  transform-origin: top right;
+  transform: scale(var(--homepage-square-scale));
+}
+#square path {
+  fill: #A313D0;
+}

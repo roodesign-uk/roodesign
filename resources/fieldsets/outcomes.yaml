@@ -1,0 +1,54 @@
+title: Outcomes
+fields:
+  -
+    handle: outcome_item
+    field:
+      collapse: false
+      sets:
+        new_set:
+          display: 'New Set'
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                instructions: 'Keep it short and sweet: be direct!'
+                listable: hidden
+                validate:
+                  - required
+            -
+              handle: content
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: true
+                antlers: false
+                display: Content
+                type: markdown
+                icon: markdown
+                instructions: 'Explain a bit more about the results: try and include some numbers'
+                listable: hidden
+      display: 'Outcome item'
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: footer
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: false
+      antlers: false
+      display: Footer
+      type: markdown
+      icon: markdown
+      instructions: 'Any other information that applies to all outcomes'
+      listable: hidden

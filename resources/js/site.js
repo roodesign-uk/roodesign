@@ -23,25 +23,24 @@ const debounce = (fn) => {
 };
 
 
-// Reads out the scroll position and stores it in the data attribute
-// so we can use it in our stylesheets
-const storeScroll = () => {
+const onScroll = () => {
+
+  let max = 75;
+  let initialSize = 50;
+  let growthFactor = 25;
+  let newWidth = newWidth > max ? max : (window.scrollY / growthFactor) + initialSize;
+
+  document.getElementById('square').style.width = `${newWidth}vw`;
   document.documentElement.dataset.scroll = window.scrollY;
-
-  let pos = window.scrollY;
-
-  //store initial size of 
-
-  if(pos > 0) {
-    document.getElementById('square').style.transform = `scale(${window.scrollY/10})`;
-  }
-  else {
-    document.getElementById('square').style.transform = `scale(1)`
-  }
   
 }
-// Listen for new scroll events, here we debounce our `storeScroll` function
-document.addEventListener('scroll', debounce(storeScroll), { passive: true });
 
-// Update scroll position for first time
-storeScroll();
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.remove('no-js');
+  document.body.classList.add('js');
+
+  document.addEventListener('scroll', debounce(onScroll), { passive: true });
+})

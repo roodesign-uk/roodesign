@@ -11,10 +11,35 @@ body {
   z-index: -1;
   top: 0;
   right: 0;
-  width: 10vw;
   transform-origin: top right;
   transform: scale(var(--homepage-square-scale));
 }
 #square path {
   fill: #A313D0;
+}
+.js #square {
+  display: block;
+  width: 50vw;
+  -webkit-animation: grow 0.5s cubic-bezier(0.74, 0.92, 0.59, 1.2);
+          animation: grow 0.5s cubic-bezier(0.74, 0.92, 0.59, 1.2);
+}
+@-webkit-keyframes grow {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

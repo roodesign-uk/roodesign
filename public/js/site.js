@@ -114,27 +114,24 @@ var debounce = function debounce(fn) {
       fn.apply(void 0, params);
     });
   };
-}; // Reads out the scroll position and stores it in the data attribute
-// so we can use it in our stylesheets
+};
 
-
-var storeScroll = function storeScroll() {
+var onScroll = function onScroll() {
+  var max = 75;
+  var initialSize = 50;
+  var growthFactor = 25;
+  var newWidth = newWidth > max ? max : window.scrollY / growthFactor + initialSize;
+  document.getElementById('square').style.width = "".concat(newWidth, "vw");
   document.documentElement.dataset.scroll = window.scrollY;
-  var pos = window.scrollY; //store initial size of 
+};
 
-  if (pos > 0) {
-    document.getElementById('square').style.transform = "scale(".concat(window.scrollY / 10, ")");
-  } else {
-    document.getElementById('square').style.transform = "scale(1)";
-  }
-}; // Listen for new scroll events, here we debounce our `storeScroll` function
-
-
-document.addEventListener('scroll', debounce(storeScroll), {
-  passive: true
-}); // Update scroll position for first time
-
-storeScroll();
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.remove('no-js');
+  document.body.classList.add('js');
+  document.addEventListener('scroll', debounce(onScroll), {
+    passive: true
+  });
+});
 
 /***/ }),
 

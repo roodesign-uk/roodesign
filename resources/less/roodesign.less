@@ -14,10 +14,28 @@ body {
   z-index: -1;
   top: 0;
   right: 0;
-  width: 10vw;
   path {
     fill: #A313D0;
   }
   transform-origin: top right;
   transform: scale(var(--homepage-square-scale));
+  //max-height: 100vh;
+
+  .js & {
+    display: block;
+    width: 50vw;
+    animation: grow .5s cubic-bezier(.74,.92,.59,1.2);
+  }
+
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

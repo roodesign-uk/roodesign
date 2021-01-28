@@ -19,7 +19,11 @@ mix.js('resources/js/site.js', 'public/js')
 //     require('postcss-preset-env')({stage: 0})
 // ])
 
-mix.less('resources/less/roodesign.less', 'public/css')
+mix.less('resources/less/roodesign.less', 'public/css', {
+   lessOptions: {
+      implementation: require("less")
+  }
+})
 
 if (mix.inProduction()) {
    mix.version();

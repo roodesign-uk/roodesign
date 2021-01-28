@@ -7,7 +7,7 @@
         <title>{{ title ?? site:name }}</title>
         <link rel="stylesheet" href="{{ mix src='css/roodesign.css' }}">
     </head>
-    <body class="no-js">
+    <body class="no-js template-{{ template }}">
         {{ template_content }}
         <script src="{{ mix src='/js/site.js' }}"></script>
     </body>

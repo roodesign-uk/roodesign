@@ -2,23 +2,17 @@
 
 //build grid item classes
 #grid {
-    .span(@breakpoint: min, @counter: 1) when (@counter <= @grid-limit) {
-        @bpToCall: ~"break-@{breakpoint}-rem";
-        @media screen and (min-width: (@@bpToCall)) {
-            .@{breakpoint}-col-span-@{counter} {
-                grid-column: span @counter / span @counter;
-            }
+    .span(@prefix: '', @counter: 1) when (@counter <= @grid-limit) {
+        .@{prefix}-col-span-@{counter} {
+            grid-column: span @counter / span @counter;
         }
-        #grid > .span(@breakpoint, @counter + 1);
+        #grid > .span(@prefix, @counter + 1);
     }
-    .start(@breakpoint: min, @counter: 1) when (@counter <= @grid-limit) {
-        @bpToCall: ~"break-@{breakpoint}-rem";
-        @media screen and (min-width: (@@bpToCall)) {
-            .@{breakpoint}-col-start-@{counter} {
-                grid-column-start: @counter;
-            }
+    .start(@prefix: '', @counter: 1) when (@counter <= @grid-limit) {
+        .@{prefix}-col-start-@{counter} {
+            grid-column-start: @counter;
         }
-        #grid > .start(@breakpoint, @counter + 1);
+        #grid > .start(@prefix, @counter + 1);
     }
 }
 
@@ -26,18 +20,7 @@
     grid-gap: unit((@gap * 2 / @base),rem);
     grid-gap: ~"calc( var(--gap) * 2)"; 
 
-    #grid > .span(min);
-    #grid > .span(mid);
-    #grid > .span(max);
-
-    #grid > .start(min);
-    #grid > .start(mid);
-    #grid > .start(max);
-}
-
-@media screen and (min-width: (@break-min-rem)) {
-
-    .grid {
+    .break-min({
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-auto-flow: row;
@@ -47,17 +30,31 @@
             grid-column: 1 / span 8;
         }
 
-    }
-    
-}
+        //create [prefix]-col-span-[1-8] classes:
+        #grid > .span(min);
 
-@media screen and (min-width: (@break-max-rem)) {
+        //create [prefix]-col-start-[1-8] classes:
+        #grid > .start(min);
+    });
 
-    .grid {
+    .break-mid({
+        //create [prefix]-col-span-[1-8] classes:
+        #grid > .span(mid);
+
+        //create [prefix]-col-start-[1-8] classes:
+        #grid > .start(mid);
+    });
+
+    .break-max({
         //default grid occupancy for items without class
         >* {
             grid-column: 2 / span 7;
         }
-    }
 
+        //create [prefix]-col-span-[1-8] classes:
+        #grid > .span(max);
+
+        //create [prefix]-col-start-[1-8] classes:
+        #grid > .start(max);
+    });
 }

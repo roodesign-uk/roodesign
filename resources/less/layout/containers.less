@@ -1,19 +1,8 @@
-#container {
-    .default() {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 (@gap-rem * 3);
-        padding: 0 calc(var(--gap) * 3);
-        max-width: unit((@site-width/@base),rem);
-    }
-}
-
 .container {
-    #container > .default;
-
-    &--decoration-highlight {
-        background-image: linear-gradient(90deg,fade(@c_yellow,1%) 12%,fade(@c_yellow,10%) 80%,fade(@c_yellow,0%));
-    }
-
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 @gap-rem;
+    padding: 0 var(--gap);
+    max-width: unit((@site-width/@base),rem);
 }
 

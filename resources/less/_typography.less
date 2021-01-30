@@ -156,6 +156,10 @@ h3, .h3 {
   #type > #size > .h3;
 }
 
+p, ol, ul, h4, h5, h6, th, td {
+    #type > #size > .regular;
+}
+
 body, input, textarea, button {
     color: @c_grey_x-dark;
     #type > #font > .sans;
@@ -242,9 +246,7 @@ code {
 .prose {
 
     //sizing
-    p, ol, ul, h4, h5, h6, th, td {
-        #type > #size > .regular;
-    }
+    
     .lead,
     &--lead p,
     &--lead p>a {

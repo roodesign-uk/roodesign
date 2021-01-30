@@ -1,54 +1,88 @@
 #space {
   
-  //new spacing, Oct 2019
-  //based on GDS
-  //use .space--{type}-{direction}-{amount[1-5]}
-  //this gives `amount * [1-5]` spacing
   .space(@amount) {
     @result-old: unit((@gap * @amount / @base), rem);
     @result-new: ~"calc( var(--gap) * @{amount})";
   }
 
-  .space-output(@type, @direction, @counter: 1) when (@counter <= @space-limit) {
-    .space--@{type}-@{direction}-@{counter} {
+  .output(@prefix: ~'', @type: margin, @direction, @counter: 0) when (@counter <= @space-limit + 1) {
+    .@{prefix}space-@{direction}-@{counter} {
       @{type}-@{direction}: #space > .space(@counter)[@result-old];
       @{type}-@{direction}: #space > .space(@counter)[@result-new];
     }
-    #space > .space-output(@type, @direction, @counter + 1);
+    #space > .output(@prefix, @type, @direction, @counter + 1);
+  }
+
+  //call: use in other less files
+  .call(@amount: 0, @direction: bottom, @type: margin) {
+      @{type}-@{direction}: #space > .space(@amount)[@result-old];
+      @{type}-@{direction}: #space > .space(@amount)[@result-new];
   }
 
 }
 
-#space > .space-output(margin,top);
-#space > .space-output(margin,bottom);
+#bleed {
 
-//turn these off for now as I'm not using them
-// #space > .space-output(margin,left);
-// #space > .space-output(margin,right);
+    .output(@direction, @prefix: ~'') when (@direction = start) {
+        .@{prefix}bleed-start {
+            width: ~"calc(100% + @{gap-rem})";
+            width: ~"calc(100% + var(--gap))";
+            margin-left: -1 * @gap-rem;
+            margin-left: ~"calc(-1 * var(--gap))";
+            margin-right: 0;
+        }
+    }
+    .output(@direction, @prefix: ~'') when (@direction = end) {
+        .@{prefix}bleed-end {
+            width: ~"calc(100% + @{gap-rem})";
+            width: ~"calc(100% + var(--gap))";
+            margin-right: -1 * @gap-rem;
+            margin-right: ~"calc(-1 * var(--gap))";
+            margin-left: 0;
+        }
+    }
+    .output(@direction, @prefix: ~'') when (@direction = both) {
+        .@{prefix}bleed-both {
+            width: ~"calc(100% + 2 * @{gap-rem})";
+            width: ~"calc(100% + 2* var(--gap))";
+            margin-left: -1 * @gap-rem;
+            margin-left: ~"calc(-1 * var(--gap))";
+            margin-right: -1 * @gap-rem;
+            margin-right: ~"calc(-1 * var(--gap))";
+        }
+    }
 
-// #space > .space-output(padding,top);
-// #space > .space-output(padding,bottom);
-// #space > .space-output(padding,left);
-// #space > .space-output(padding,right);
+    .call(@direction, @prefix: ~'') {
+        #bleed > .output(@direction, @prefix);
+    }
+}
 
-//bleeds
-//only apply these on wider screens
+#space > .output(@direction: top);
+#space > .output(@direction: bottom);
+#bleed > .output(start);
+#bleed > .output(end);
+#bleed > .output(both);
+
+.break-min({
+    #space > .output(@direction: top, @prefix: min-);
+    #space > .output(@direction: bottom, @prefix: min-);
+    #bleed > .output(start, min-);
+    #bleed > .output(end, min-);
+    #bleed > .output(both, min-);
+});
+
+.break-mid({
+    #space > .output(@direction: top, @prefix: mid-);
+    #space > .output(@direction: bottom, @prefix: mid-);
+    #bleed > .output(start, mid-);
+    #bleed > .output(end, mid-);
+    #bleed > .output(both, mid-);
+});
+
 .break-max({
-    .bleed--start,
-    .bleed--end {
-        width: ~"calc(100% + @{gap-rem})";
-        width: ~"calc(100% + var(--gap))";
-    }
-    .bleed--start.bleed--end {
-        width: ~"calc(100% + (2 * @{gap-rem}))";
-        width: ~"calc(100% + (2 * var(--gap)))";
-    }
-    .bleed--start {
-        margin-left: -1 * @gap-rem;
-        margin-left: ~"calc(-1 * var(--gap))";
-    }
-    .bleed--end {
-        margin-right: -1 * @gap-rem;
-        margin-right: ~"calc(-1 * var(--gap))";
-    }
+    #space > .output(@direction: top, @prefix: max-);
+    #space > .output(@direction: bottom, @prefix: max-);
+    #bleed > .output(start, max-);
+    #bleed > .output(end, max-);
+    #bleed > .output(both, max-);
 });

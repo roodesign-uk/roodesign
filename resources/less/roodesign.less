@@ -11,9 +11,11 @@
 //components
 @import 'components/navigation';
 @import 'components/footer';
+@import 'components/card';
 
 //special cases for pages
 @import 'pages/home';
+
 
 
 //move this?
@@ -36,6 +38,18 @@
 body {
   margin: unit((@gap/@base),rem) 0;
   margin: var(--gap) 0;
+}
+body:before {
+  content: "bp: none";
+  background-color: white;
+  color: black;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  .break-min({ content: "bp min"; });
+  .break-mid({ content: "bp mid"; });
+  .break-max({ content: "bp max"; });
 }
 
 body.template-default {

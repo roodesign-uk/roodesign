@@ -2,6 +2,18 @@
   background-color: white;
   padding: @gap-rem;
   padding: var(--gap);
-
   color: @c_grey_x-dark;
+  position: relative;
+  transition: all .25s @effect-bounce;
+
+  &__link:before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    left: 0; bottom: 0;
+  }
+
+  &:hover {
+    transform: rotate(2deg) scale(1.05);
+  }
 }

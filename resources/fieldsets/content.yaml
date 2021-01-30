@@ -1,0 +1,16 @@
+title: Content
+fields:
+  -
+    handle: markdown
+    field:
+      container: assets
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: true
+      antlers: false
+      display: Markdown
+      type: markdown
+      icon: markdown
+      listable: hidden

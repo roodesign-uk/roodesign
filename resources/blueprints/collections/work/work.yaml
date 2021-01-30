@@ -11,13 +11,60 @@ sections:
           validate:
             - required
       -
-        handle: content
+        handle: date
         field:
-          type: markdown
-          display: Content
-          localizable: true
+          mode: single
+          time_enabled: false
+          time_required: false
+          earliest_date: '2000-01-01'
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: Date
+          type: date
+          icon: date
+          listable: hidden
       -
-        import: outcomes
+        handle: sections
+        field:
+          collapse: false
+          sets:
+            section:
+              display: Section
+              fields:
+                -
+                  handle: section_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Section title'
+                    type: text
+                    icon: text
+                    listable: hidden
+                -
+                  handle: section_content
+                  field:
+                    collapse: false
+                    sets:
+                      content:
+                        display: Content
+                        fields:
+                          -
+                            import: content
+                      image:
+                        display: Image
+                        fields:
+                          -
+                            import: image
+                    display: 'Section content'
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+          display: Sections
+          type: replicator
+          icon: replicator
+          listable: hidden
   sidebar:
     display: Sidebar
     fields:

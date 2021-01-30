@@ -22,11 +22,11 @@
     display: grid;
     grid-auto-flow: row;
 
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(@grid-limit, 1fr);
         
     //default grid occupancy for items without class
     >* {
-        grid-column: 1 / span 8;
+        grid-column: 1 / -1;
     }
 
     //create [prefix]-col-span-[1-8] classes:
@@ -53,11 +53,6 @@
     });
 
     .break-max({
-        //default grid occupancy for items without class
-        >* {
-            grid-column: 2 / span 7;
-        }
-
         //create [prefix]-col-span-[1-8] classes:
         #grid > .span(max-);
 

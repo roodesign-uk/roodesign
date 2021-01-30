@@ -1,0 +1,36 @@
+title: Image
+fields:
+  -
+    handle: assets
+    field:
+      mode: grid
+      restrict: false
+      allow_uploads: true
+      display: Assets
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    handle: caption
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: false
+      antlers: false
+      display: Caption
+      type: markdown
+      icon: markdown
+      listable: hidden
+  -
+    handle: style
+    field:
+      inline: false
+      options:
+        stage: Stage
+        shadow: Shadow
+      display: Style
+      type: checkboxes
+      icon: checkboxes
+      listable: hidden

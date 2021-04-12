@@ -1,15 +1,2 @@
 title: Main
 max_depth: 1
-tree:
-  -
-    title: Work
-    url: /work
-  -
-    title: Articles
-    url: /articles
-  -
-    title: About
-    url: /about
-  -
-    title: 'Hire me'
-    url: /contact

@@ -1,5 +1,11 @@
 title: Articles
+template: articles/show
+layout: layout
+mount: 8313e3e9-508b-4521-92df-af52c7137561
 revisions: false
+route: '/articles/{year}-{month}-{day}-{slug}'
+date: true
+sort_dir: asc
 date_behavior:
   past: public
-  future: private
+  future: unlisted

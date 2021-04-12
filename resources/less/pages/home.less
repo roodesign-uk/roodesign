@@ -6,6 +6,22 @@ body.template-home {
   color: white;
 }
 
+@home-card-width: unit((440/@base), rem);
+
+.home-cards {
+  width: ~"calc(100vw + @{home-card-width})";
+  margin-left: ~"calc(-50vw + @{home-card-width})";
+
+  display: flex;
+  justify-content: center;
+
+  > * {
+    width: ~"calc(33% - @{gap-rem})";
+    box-sizing: border-box;
+  }
+
+}
+
 #square {
   position: absolute;
   z-index: -1;

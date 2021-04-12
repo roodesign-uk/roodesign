@@ -169,35 +169,35 @@ a img {
 }
 @font-face {
   font-family: 'YoungSerif';
-  src: url('/assets/fonts/YoungSerif.woff2') format('woff2');
+  src: url('/css/fonts/YoungSerif.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Orkney';
-  src: url('/assets/fonts/Orkney Regular.woff2') format('woff2');
+  src: url('/css/fonts/Orkney Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Orkney';
-  src: url('/assets/fonts/Orkney Bold.woff2') format('woff2');
+  src: url('/css/fonts/Orkney Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Orkney';
-  src: url('/assets/fonts/Orkney Regular Italic.woff2') format('woff2');
+  src: url('/css/fonts/Orkney Regular Italic.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'Orkney';
-  src: url('/assets/fonts/Orkney Bold Italic.woff2') format('woff2');
+  src: url('/css/fonts/Orkney Bold Italic.woff2') format('woff2');
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: 'Fira Code';
-  src: url('/assets/fonts/FiraCode.woff2') format('woff2');
+  src: url('/css/fonts/FiraCode.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -274,6 +274,9 @@ a {
     line-height: 1.63157895;
   }
 }
+.center {
+  text-align: center;
+}
 body,
 input,
 textarea,
@@ -345,7 +348,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('/assets/images/css/splodge.svg') top left no-repeat;
+  background: url('/css/imagessplodge.svg') top left no-repeat;
   background-size: contain;
   top: -2.6875rem;
   left: 0;
@@ -461,10 +464,10 @@ code {
   font-weight: bold;
 }
 .prose ul li {
-  list-style-image: url('/assets/images/css/bullet.svg');
+  list-style-image: url('/css/imagesbullet.svg');
 }
 .prose ul li li {
-  list-style-image: url('/assets/images/css/bullet-level-2.svg');
+  list-style-image: url('/css/imagesbullet-level-2.svg');
 }
 .prose ul li li li {
   list-style: square;
@@ -1295,21 +1298,20 @@ separator {
   position: relative;
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.card__link:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-.card:hover {
-  transform: rotate(2deg) scale(1.05);
-}
 body.template-home {
   overflow-x: hidden;
   background-color: #7B05E2;
   color: white;
+}
+.home-cards {
+  width: calc(100vw + 27.5rem);
+  margin-left: calc(-50vw + 27.5rem);
+  display: flex;
+  justify-content: center;
+}
+.home-cards > * {
+  width: calc(33% - 1.875rem);
+  box-sizing: border-box;
 }
 #square {
   position: absolute;
@@ -1376,7 +1378,7 @@ body:before {
   }
 }
 body.template-default {
-  background-image: linear-gradient(0deg, white 0%, white 40%, rgba(255, 255, 255, 0.5) 41%, rgba(255, 255, 255, 0) 100%), url('/assets/images/css/pattern-roo-black-10.svg');
+  background-image: linear-gradient(0deg, white 0%, white 40%, rgba(255, 255, 255, 0.5) 41%, rgba(255, 255, 255, 0) 100%), url('/css/imagespattern-roo-black-10.svg');
   background-position: bottom left,
       top left;
   background-repeat: no-repeat, repeat;

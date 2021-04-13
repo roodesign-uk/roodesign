@@ -11,20 +11,20 @@ sections:
           validate:
             - required
       -
-        handle: content
+        handle: introduction
         field:
-          container: assets
-          folder: articles
           restrict: false
           automatic_line_breaks: true
           automatic_links: false
           escape_markup: false
-          smartypants: true
-          antlers: true
-          display: Content
+          smartypants: false
+          antlers: false
+          display: Introduction
           type: markdown
           icon: markdown
           listable: hidden
+      -
+        import: content
   sidebar:
     display: Sidebar
     fields:
@@ -44,3 +44,18 @@ sections:
           type: template
           icon: template
           listable: hidden
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select

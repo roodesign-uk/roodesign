@@ -17,7 +17,7 @@ fields:
       automatic_line_breaks: true
       automatic_links: false
       escape_markup: false
-      smartypants: false
+      smartypants: true
       antlers: false
       display: Caption
       type: markdown

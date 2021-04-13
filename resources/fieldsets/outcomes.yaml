@@ -1,12 +1,22 @@
 title: Outcomes
 fields:
   -
-    handle: outcome_item
+    handle: title
+    field:
+      placeholder: Outcomes
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: items
     field:
       collapse: false
       sets:
-        new_set:
-          display: 'New Set'
+        outcome:
+          display: Outcome
           fields:
             -
               handle: title
@@ -16,10 +26,7 @@ fields:
                 display: Title
                 type: text
                 icon: text
-                instructions: 'Keep it short and sweet: be direct!'
                 listable: hidden
-                validate:
-                  - required
             -
               handle: content
               field:
@@ -32,9 +39,8 @@ fields:
                 display: Content
                 type: markdown
                 icon: markdown
-                instructions: 'Explain a bit more about the results: try and include some numbers'
                 listable: hidden
-      display: 'Outcome item'
+      display: Items
       type: replicator
       icon: replicator
       listable: hidden
@@ -50,5 +56,5 @@ fields:
       display: Footer
       type: markdown
       icon: markdown
-      instructions: 'Any other information that applies to all outcomes'
+      instructions: 'Optional. Add anything here that applies to all outcomes.'
       listable: hidden

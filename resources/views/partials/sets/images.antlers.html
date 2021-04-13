@@ -1,0 +1,10 @@
+<figure class="gallery">
+  <div class="gallery-images">
+  {{ assets }}
+    <img src="{{ url }}" alt="{{ alt }}">
+  {{ /assets }}
+  </div>
+  {{ if caption }}
+  <figcaption>{{ caption }}</figcaption>
+  {{ /if }}
+</figure>

@@ -1,16 +1,51 @@
 title: Content
 fields:
   -
-    handle: markdown
+    handle: content
     field:
-      container: assets
-      restrict: false
-      automatic_line_breaks: true
-      automatic_links: false
-      escape_markup: false
-      smartypants: true
-      antlers: false
-      display: Markdown
-      type: markdown
-      icon: markdown
+      always_show_set_button: true
+      sets:
+        images:
+          display: 'Image or Gallery'
+          fields:
+            -
+              import: image
+        quote:
+          display: Quote
+          fields:
+            -
+              import: quote
+        outcomes:
+          display: Outcomes
+          fields:
+            -
+              import: outcomes
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - table
+        - strikethrough
+        - code
+        - codeblock
+        - horizontalrule
+        - h4
+        - h3
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: true
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      display: Content
+      type: bard
+      icon: bard
       listable: hidden

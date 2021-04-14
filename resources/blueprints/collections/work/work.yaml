@@ -43,44 +43,15 @@ sections:
                 -
                   import: content
                 -
-                  handle: show_image
+                  handle: section_image
                   field:
-                    display: 'Show image?'
-                    type: toggle
-                    icon: toggle
+                    display: 'Section image'
+                    type: section
+                    icon: section
+                    instructions: 'An image that sits alongside this section'
                     listable: hidden
                 -
-                  handle: image
-                  field:
-                    mode: grid
-                    container: assets
-                    folder: work
-                    restrict: false
-                    allow_uploads: true
-                    max_files: 1
-                    display: Image
-                    type: assets
-                    icon: assets
-                    width: 50
-                    listable: hidden
-                    if:
-                      show_image: 'equals true'
-                -
-                  handle: image_caption
-                  field:
-                    restrict: false
-                    automatic_line_breaks: true
-                    automatic_links: false
-                    escape_markup: false
-                    smartypants: true
-                    antlers: false
-                    display: 'Image caption'
-                    type: markdown
-                    icon: markdown
-                    width: 50
-                    listable: hidden
-                    if:
-                      show_image: 'equals true'
+                  import: image
           display: Sections
           type: replicator
           icon: replicator

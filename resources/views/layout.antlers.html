@@ -4,10 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
+        <title>{{ title ?? site:name }} -  {{ site:name }}</title>
         <link rel="stylesheet" href="{{ mix src='css/roodesign.css' }}">
     </head>
     <body class="no-js template-{{ template }}">
+        <header class="container">
+            {{ partial:navigation }}
+        </header>
         {{ template_content }}
         <script src="{{ mix src='/js/site.js' }}"></script>
     </body>

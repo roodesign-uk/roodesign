@@ -1,63 +1,32 @@
-//global base
+@width-min: 320;
+@width-max: 1200;
 @base: 16;
-@fontbase: 18;
 
-//layout sizing:
-@gap: 30;
-@gap-rem: unit((@gap/@base),rem);
-
-//space limit (how many spacing util classes to build)
-@space-limit: 5;
-
-//grid limit (how many grid util classes to build)
-@grid-limit: 12;
-
-//site sizing:
-@site-width: 1200;
-@break-max-rem: unit((@site-width/@base),rem);
-
-@break-min: 512;
-@break-min-rem: unit((@break-min/@base),rem);
-@break-mid: 1024;
-@break-mid-rem: unit((@break-mid/@base),rem);
+//type sizes - see: https://utopia.fyi/
+@type-min-scale: 1.2;
+@type-min-size: 19;
+@type-max-scale: 1.333;
+@type-max-size: 21;
+@typescale-up-steps: 10;
+@typescale-down-steps: 2;
 
 //paths
-@img_path: '/css/images';
-@font_path: '/css/fonts/';
+@path-fonts: '/css/fonts/';
 
-//colours
-@c_grey_light: #EFEFEF;
-@c_grey_med: #cfcfcf;
-@c_grey_dark: #505050;
-@c_grey_x-dark: #222;
-
-@c_green: #71CBAF;
-@c_green_light: #F0FAF7;
-
-@c_blue: #004ADB;
-@c_blue_light: #D7E2F9;
-
-@c_red: #E97055;
-@c_red_light: #F6DFDA;
-
-@c_yellow: #EDBB4A;
-@c_yellow_light: #FFEFCB;
-
-@c_purple: #7B05E2;
-@c_purple_light: lighten(@c_purple,30%);
-
-//sfx
-@effect-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 :root {
-    --gap: unit((15/@base),rem);
-    --base: @base;
-    --fontbase: 15;
+  --fluid-min-width: @width-min;
+  --fluid-max-width: @width-max;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / @base * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
 }
 
-.break-min({
-    :root {
-        --gap: @gap-rem;
-        --fontbase: @fontbase;
-    }
-});
+@media screen and (min-width: unit(@width-max, px)) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}

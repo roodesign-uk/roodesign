@@ -5,6 +5,7 @@ mount: f719c7e5-53b4-4de8-b0b7-4f035516d51d
 taxonomies:
   - tags
 revisions: false
+route: '/work/{slug}'
 date: true
 sort_dir: asc
 date_behavior:

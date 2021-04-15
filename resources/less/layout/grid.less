@@ -1,0 +1,83 @@
+//grids inspired by tailwind grid classes: https://tailwindcss.com/docs/grid-column
+
+//build grid item classes
+#grid {
+  .span(@prefix: ~'', @counter: 1) when (@counter <= @grid-limit) {
+      .@{prefix}col-span-@{counter} {
+          grid-column: span @counter / span @counter;
+      }
+      #grid > .span(@prefix, @counter + 1);
+  }
+  .start(@prefix: ~'', @counter: 1) when (@counter <= @grid-limit) {
+      .@{prefix}col-start-@{counter} {
+          grid-column-start: @counter;
+      }
+      #grid > .start(@prefix, @counter + 1);
+  }
+
+  .align(@prefix: ~'') {
+      .@{prefix}align-start {
+          justify-self: start;
+      }
+      .@{prefix}align-end {
+          justify-self: end;
+      }
+      .@{prefix}align-center {
+          justify-self: center;
+      }  
+  }
+
+}
+
+
+.grid {
+
+  display: grid;
+  grid-auto-flow: row;
+  column-gap: var(--space-m);
+  
+  &--space-all {
+    row-gap: var(--space-m); 
+  }
+      
+  grid-template-columns: repeat(@grid-limit, 1fr);
+      
+  //default grid occupancy for items without class
+  >* {
+      grid-column: 1 / -1;
+  }
+
+  //create [prefix]-col-span-[1-x] classes:
+  #grid > .span();
+
+  //create [prefix]-col-start-[1-x] classes:
+  #grid > .start();
+
+  //align classes
+  #grid > .align();
+
+}
+
+@media @bp[s] {
+  #grid > .span(s-);
+  #grid > .start(s-);
+  #grid > .align(s-);
+}
+
+@media @bp[m] {
+  #grid > .span(m-);
+  #grid > .start(m-);
+  #grid > .align(m-);
+}
+
+@media @bp[l] {
+  #grid > .span(l-);
+  #grid > .start(l-);
+  #grid > .align(l-);
+}
+
+@media @bp[xl] {
+  #grid > .span(xl-);
+  #grid > .start(xl-);
+  #grid > .align(xl-);
+}

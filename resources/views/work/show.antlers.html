@@ -1,6 +1,16 @@
 <h1>{{ title }}</h1>
 {{ sections }}
-  {{ content }}
-    {{ partial src="sets/{type}" }}
-  {{ /content }}
+  <section class="grid" id="{{ title | slugify }}" aria-labelledby="{{ title | slugify}}--title">
+    <h2 id="{{ title | slugify }}--title">{{ title }}</h2>
+    {{ content }}
+
+      {{ if type === "text" }}
+        {{ variable:classes value="xl-col-start-2 xl-col-span-6" }}
+      {{ else }}
+        {{ variable:classes value="xl-col-start-1 xl-col-span-10" }}  
+      {{ /if }}
+
+      {{ partial src="sets/{type}" classes="{variable:classes}" }}
+    {{ /content }}
+  </section> 
 {{ /sections }}

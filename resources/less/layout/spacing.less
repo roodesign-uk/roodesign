@@ -1,0 +1,17 @@
+#space {
+  .make(@modifier: 1, @name) {
+      @min: @type-min-size * @modifier;
+      @max: @type-max-size * @modifier;
+      :root {
+          --space-@{name}: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
+      }
+  }
+}
+
+#space > .make(@spacing[xxs], xxs);
+#space > .make(@spacing[xs], xs);
+#space > .make(@spacing[s], s);
+#space > .make(@spacing[m], m);
+#space > .make(@spacing[l], l);
+#space > .make(@spacing[xl], xl);
+#space > .make(@spacing[xxl], xxl);

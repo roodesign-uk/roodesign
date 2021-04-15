@@ -1,23 +1,42 @@
 //typescales
-.typescale-up(@counter: 0) when (@counter <= @typescale-up-steps) {
-    @min: round(pow(@type-min-scale, @counter) * @type-min-size, 2);
-    @max: round(pow(@type-max-scale, @counter) * @type-max-size, 2);
-    :root {
-        --step-@{counter}: calc((unit((@min/16), rem)) + (@max - @min) *var(--fluid-bp));
+#type {
+    .make-typescale-up(@counter: 0) when (@counter <= @typescale-up-steps) {
+        @min: round(pow(@type-min-scale, @counter) * @type-min-size, 2);
+        @max: round(pow(@type-max-scale, @counter) * @type-max-size, 2);
+        :root {
+            --step-@{counter}: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
+        }
+        #type > .make-typescale-up(@counter + 1); 
     }
-    .typescale-up(@counter + 1); 
+    .make-typescale-down(@counter: 1) when (@counter <= @typescale-down-steps) {
+        @min: round((@type-min-size / pow(@type-min-scale, @counter)), 2);
+        @max: round((@type-max-size / pow(@type-max-scale, @counter)), 2);
+        :root {
+            --step--@{counter}: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
+        }
+        #type > .make-typescale-down(@counter + 1);  
+    }
+    .scale(@min, @max) {
+        font-size: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
+    }
 }
-.typescale-down(@counter: 1) when (@counter <= @typescale-down-steps) {
-    @min: round((@type-min-size / pow(@type-min-scale, @counter)), 2);
-    @max: round((@type-max-size / pow(@type-max-scale, @counter)), 2);
-    :root {
-        --step--@{counter}: calc((unit((@min/16), rem)) + (@max - @min) *var(--fluid-bp));
+#type > .make-typescale-up;
+#type > .make-typescale-down;
+
+#type {
+    .style() {
+
     }
-    .typescale-down(@counter + 1);  
+    .family() {
+        .sans() {
+            font-family: 'Debut Sans', sans-serif;
+        }
+        .serif() {
+            font-family: 'Young Serif', serif;
+        }
+    }
 }
 
-.typescale-up;
-.typescale-down;
 
 //font files
 @font-face{
@@ -51,15 +70,47 @@
     font-style: normal;
 }
 
+//global typographic settings
+
 body{
-    font: var(--step-0)/1.5 'Debut Sans', sans-serif;
+    font-size: var(--step-0);
+    line-height: var(--line-height);
+    #type.family.sans;
+    font-variant-ligatures: common-ligatures;
 }
 
 h1, h2, h3, h4 {
-    line-height: 1;
+    line-height: var(line-height--tight);
 }
 
 h1 {
-    font-family: 'Young Serif';
-    font-size: var(--step-9);
+    #type.family.serif;
+    font-size: var(--step-5);
+}
+
+h2 {
+    font-size: var(--step-4);
+
+}
+
+h3 {
+    font-size: var(--step-3);
+}
+
+//type helper classes
+
+.type {
+    &-huge {
+        #type > .scale(60, 240);
+    }
+}
+
+//prose
+.prose {
+    >*+* {
+        margin-top: var(--space-s);
+    }
+    p, ul, ol {
+        max-width: var(--line-length);
+    }
 }

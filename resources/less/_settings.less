@@ -4,14 +4,15 @@
 
 //breakpoints
 @bp: {
-  none: ~"only screen and (max-width: @{width-min}px)";
-  s: ~"only screen and (max-width: 512px)";
-  s-only: ~"only screen and (min-width: @{width-min}px) and (max-width: 512px;)";
-  m: ~"only screen and (max-width: 900px)";
-  m-only: ~"only screen and (min-width: 512px) and (max-width: 900px)";
-  l: ~"only screen and (max-width: @{width-max}px)";
-  l-only: ~"only screen and (min-width: 900px) and (max-width: @{width-max}px)";
-  xl: ~"only screen and (min-width: @{width-max}px)";
+  upto-min: ~"only screen and (max-width: @{width-min}px)";
+  min: ~"only screen and (min-width: @{width-min}px)";
+  mid: ~"only screen and (min-width: 520px)";
+  max: ~"only screen and (min-width: 900px)";
+  beyond-max: ~"only screen and (min-width: @{width-max}px)";
+
+  min-only: ~"only screen and (min-width: @{width-min}px) and (max-width: 520px)";
+  mid-only: ~"only screen and (min-width: 520px) and (max-width: 900px)";
+  max-only: ~"only screen and (min-width: 900px) and (max-width: 1200px)";
 }
 
 

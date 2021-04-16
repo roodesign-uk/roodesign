@@ -6,12 +6,17 @@
           --space-@{name}: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
       }
   }
+  .range(@attr, @min-name, @max-name) {
+    @min: @type-min-size * @spacing[@@min-name];
+    @max: @type-max-size * @spacing[@@max-name];
+    @{attr}: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
+  }
 }
 
-#space > .make(@spacing[xxs], xxs);
-#space > .make(@spacing[xs], xs);
-#space > .make(@spacing[s], s);
-#space > .make(@spacing[m], m);
-#space > .make(@spacing[l], l);
-#space > .make(@spacing[xl], xl);
-#space > .make(@spacing[xxl], xxl);
+#space > .make(@spacing[@xxs], xxs);
+#space > .make(@spacing[@xs], xs);
+#space > .make(@spacing[@s], s);
+#space > .make(@spacing[@m], m);
+#space > .make(@spacing[@l], l);
+#space > .make(@spacing[@xl], xl);
+#space > .make(@spacing[@xxl], xxl);

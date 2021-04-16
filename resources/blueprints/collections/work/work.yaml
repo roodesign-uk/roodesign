@@ -13,15 +13,10 @@ sections:
       -
         handle: introduction
         field:
-          restrict: false
-          automatic_line_breaks: true
-          automatic_links: false
-          escape_markup: false
-          smartypants: true
           antlers: false
           display: Introduction
-          type: markdown
-          icon: markdown
+          type: textarea
+          icon: textarea
           listable: hidden
       -
         handle: sections

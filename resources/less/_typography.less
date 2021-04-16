@@ -85,7 +85,7 @@ h1, h2, h3, h4 {
 
 h1 {
     #type.family.serif;
-    font-size: var(--step-7);
+    #type > .scale(40, 130);
 }
 
 h2 {
@@ -96,11 +96,16 @@ h3 {
     font-size: var(--step-2);
 }
 
+
 //type helper classes
 
 .type {
     &-huge {
         #type > .scale(60, 240);
+    }
+    &-lead {
+        font-size: var(--step-2);
+        font-style: italic;
     }
 }
 
@@ -115,8 +120,13 @@ h3 {
         text-transform: uppercase;
     }
 
-    >*+h3 {
+    >*+h3,
+    >*+h4 {
         margin-top: var(--space-l);
+    }
+    >h3+p,
+    >h4+p {
+        margin-top: var(--space-xs);
     }
 
     li+li {

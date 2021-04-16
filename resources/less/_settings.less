@@ -12,15 +12,15 @@
 
   min-only: ~"only screen and (min-width: @{width-min}px) and (max-width: 520px)";
   mid-only: ~"only screen and (min-width: 520px) and (max-width: 900px)";
-  max-only: ~"only screen and (min-width: 900px) and (max-width: 1200px)";
+  max-only: ~"only screen and (min-width: 900px) and (max-width: @{width-max}px)";
 }
 
 
 //type sizes - see: https://utopia.fyi/
 @type-min-scale: 1.2;
 @type-min-size: 19;
-@type-max-scale: 1.25;
-@type-max-size: 21;
+@type-max-scale: 1.2;
+@type-max-size: 24;
 @typescale-up-steps: 10;
 @typescale-down-steps: 2;
 
@@ -30,13 +30,20 @@
 
 //spacing
 @spacing: {
-  xxs: 0.25;
-  xs: 0.5;
-  s: 1;
-  m: 2;
-  l: 3;
-  xl: 4;
-  xxl: 5;
+  @xxs: 0.25;
+  @xs: 0.5;
+  @s: 1;
+  @m: 2;
+  @l: 3;
+  @xl: 4;
+  @xxl: 5;
+}
+
+//colours
+@c: {
+  grey-x-dark: #333333;
+  purple: #7B05E2;
+  pink: #A313D0;
 }
 
 //grid

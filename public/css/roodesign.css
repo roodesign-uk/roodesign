@@ -250,17 +250,17 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: var(line-height--tight);
+  line-height: var(--line-height--tight);
 }
 h1 {
   font-family: 'Young Serif', serif;
-  font-size: var(--step-5);
+  font-size: var(--step-7);
 }
 h2 {
-  font-size: var(--step-4);
+  font-size: var(--step-3);
 }
 h3 {
-  font-size: var(--step-3);
+  font-size: var(--step-2);
 }
 .type-huge {
   font-size: calc(3.75rem + (240 - 60) * var(--fluid-bp));
@@ -268,10 +268,22 @@ h3 {
 .prose > * + * {
   margin-top: var(--space-s);
 }
-.prose p,
-.prose ul,
-.prose ol {
-  max-width: var(--line-length);
+.prose h3 {
+  font-variant-caps: all-small-caps;
+  text-transform: uppercase;
+}
+.prose > * + h3 {
+  margin-top: var(--space-l);
+}
+.prose li + li {
+  margin-top: var(--space-xs);
+}
+.prose li {
+  margin-left: 1em;
+  padding-left: var(--space-xs);
+}
+.prose ul > li {
+  list-style-image: url(/css/images/bullet.svg);
 }
 .container {
   max-width: 75rem;

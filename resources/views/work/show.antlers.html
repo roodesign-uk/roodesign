@@ -5,9 +5,9 @@
     {{ content }}
 
       {{ if type === "text" }}
-        {{ variable:classes value="mid-col-start-2 mid-col-span-6" }}
+        {{ variable:classes value="max-col-start-2 max-col-span-6" }}
       {{ else }}
-        {{ variable:classes value="mid-col-start-1 mid-col-span-10" }}  
+        {{ variable:classes value="max-col-start-1 max-col-span-10" }}  
       {{ /if }}
 
       {{ partial src="sets/{type}" classes="{variable:classes}" }}

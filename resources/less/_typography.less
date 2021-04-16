@@ -80,21 +80,20 @@ body{
 }
 
 h1, h2, h3, h4 {
-    line-height: var(line-height--tight);
+    line-height: var(--line-height--tight);
 }
 
 h1 {
     #type.family.serif;
-    font-size: var(--step-5);
+    font-size: var(--step-7);
 }
 
 h2 {
-    font-size: var(--step-4);
-
+    font-size: var(--step-3);
 }
 
 h3 {
-    font-size: var(--step-3);
+    font-size: var(--step-2);
 }
 
 //type helper classes
@@ -110,7 +109,27 @@ h3 {
     >*+* {
         margin-top: var(--space-s);
     }
-    p, ul, ol {
-        max-width: var(--line-length);
+
+    h3 {
+        font-variant-caps: all-small-caps;
+        text-transform: uppercase;
     }
+
+    >*+h3 {
+        margin-top: var(--space-l);
+    }
+
+    li+li {
+        margin-top: var(--space-xs);
+    }
+
+    li {
+        margin-left: 1em;
+        padding-left: var(--space-xs);
+    }
+
+    ul > li {
+        list-style-image: ~"url(@{path-images}bullet.svg)";
+    }
+
 }

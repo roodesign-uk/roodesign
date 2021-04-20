@@ -6,10 +6,6 @@
     margin-top: var(--space-m);
     #space > .range(margin-bottom, m, xl);
 
-    &__items {
-        font-size: var(--step--1);
-    }
-
     li {
         list-style: none;
         margin-bottom: var(--space-xxs);
@@ -17,7 +13,7 @@
 
     a {
         text-decoration: none;
-        color: @c[grey-x-dark];
+        color: var(--c-grey-x-dark);
         &:focus {
             outline: 3px solid;
         }
@@ -45,7 +41,7 @@
             left: 0;
             height: 8px;
             width: 100%;
-            background: @c[pink];
+            background: var(--c-yellow);
             z-index: -1;
         }
         
@@ -53,6 +49,11 @@
 
     &__items {
         text-align: right;
+    }
+
+    //reverse
+    &--reverse a {
+        color: white;
     }
 
 }

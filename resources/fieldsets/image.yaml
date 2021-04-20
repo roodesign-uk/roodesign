@@ -1,4 +1,4 @@
-title: Image
+title: Gallery
 fields:
   -
     handle: assets
@@ -11,19 +11,6 @@ fields:
       icon: assets
       listable: hidden
   -
-    handle: caption
-    field:
-      restrict: false
-      automatic_line_breaks: true
-      automatic_links: false
-      escape_markup: false
-      smartypants: true
-      antlers: false
-      display: Caption
-      type: markdown
-      icon: markdown
-      listable: hidden
-  -
     handle: style
     field:
       inline: false
@@ -33,4 +20,31 @@ fields:
       display: Style
       type: checkboxes
       icon: checkboxes
+      listable: hidden
+      width: 50
+  -
+    handle: layout
+    field:
+      options:
+        full: 'Full width'
+        text: 'Text width'
+        right: 'To the right of text'
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Layout
+      type: select
+      icon: select
+      width: 50
+      listable: hidden
+  -
+    handle: caption
+    field:
+      antlers: false
+      display: Caption
+      type: textarea
+      icon: textarea
       listable: hidden

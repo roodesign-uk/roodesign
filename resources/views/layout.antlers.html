@@ -7,7 +7,7 @@
         <title>{{ title ?? site:name }} -  {{ site:name }}</title>
         <link rel="stylesheet" href="{{ mix src='css/roodesign.css' }}">
     </head>
-    <body class="no-js template-{{ template }}">
+    <body class="no-js template-{{ template | slugify }}">
         <header class="container">
             {{ partial:navigation }}
         </header>

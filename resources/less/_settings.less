@@ -7,11 +7,11 @@
   upto-min: ~"only screen and (max-width: @{width-min}px)";
   min: ~"only screen and (min-width: @{width-min}px)";
   mid: ~"only screen and (min-width: 520px)";
-  max: ~"only screen and (min-width: 900px)";
+  max: ~"only screen and (min-width: 980px)";
   beyond-max: ~"only screen and (min-width: @{width-max}px)";
 
   min-only: ~"only screen and (min-width: @{width-min}px) and (max-width: 520px)";
-  mid-only: ~"only screen and (min-width: 520px) and (max-width: 900px)";
+  mid-only: ~"only screen and (min-width: 520px) and (max-width: 980px)";
   max-only: ~"only screen and (min-width: 900px) and (max-width: @{width-max}px)";
 }
 
@@ -30,6 +30,7 @@
 
 //spacing
 @spacing: {
+  @none: 0;
   @xxs: 0.25;
   @xs: 0.5;
   @s: 1;
@@ -37,13 +38,6 @@
   @l: 3;
   @xl: 4;
   @xxl: 5;
-}
-
-//colours
-@c: {
-  grey-x-dark: #333333;
-  purple: #7B05E2;
-  pink: #A313D0;
 }
 
 //grid
@@ -64,6 +58,13 @@
   --line-height: 1.5;
   --line-height--loose: 1.75;
   --line-height--tight: 1.1;
+
+  //colours
+  --c-grey-x-dark: #333333;
+  --c-purple: #7B05E2;
+  --c-pink: #A313D0;
+  --c-yellow: #EDBB4A;
+  --c-blue: #004ADB;
 }
 
 @media screen and (min-width: unit(@width-max, px)) {

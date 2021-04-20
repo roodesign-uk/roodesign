@@ -30,7 +30,20 @@
 
 #type {
     .style() {
-
+        .link() {
+            color: var(--c-blue);
+            text-decoration: underline;
+            &:hover {
+                text-decoration: solid underline var(--c-blue) 3px;
+            }
+            &:focus {
+                outline: 3px solid transparent;
+                background-color: var(--c-yellow);
+                box-shadow: 0 -2px var(--c-yellow), 0 4px black;
+                text-decoration: none;
+                color: black;
+            }
+        }
     }
     .family() {
         .sans() {
@@ -90,7 +103,7 @@ h1, h2, h3, h4 {
 
 h1, .h1 {
     #type.family.serif;
-    #type > .steps(8, 10);
+    #type > .steps(5, 10);
 }
 
 h2 {
@@ -99,7 +112,11 @@ h2 {
 }
 
 h3 {
-    font-size: var(--step-2);
+    font-size: var(--step-1);
+}
+
+h4 {
+    font-size: var(--step-0);    
 }
 
 
@@ -108,14 +125,20 @@ h3 {
 .type {
     &-lead {
         font-size: var(--step-1);
-        font-style: italic;
+    }
+    &-mega {
+        #type.steps(6, 12);
     }
 }
 
 //prose
 .prose {
-    >*+* {
+    >*+*{
         margin-top: var(--space-s);
+    }
+
+    >*+h2 {
+        margin-top: var(--space-xxl);
     }
 
     >*+h3,
@@ -138,6 +161,21 @@ h3 {
 
     ul > li {
         list-style-image: ~"url(@{path-images}bullet.svg)";
+    }
+
+    a {
+        #type.style.link;
+    }
+
+    //autolayout
+    &--flow {
+        >p,
+        >ul,
+        >ol,
+        >table,
+        >h2,>h3,>h4,>h5,>h6 {
+            #container.flow;
+        }
     }
 
 }

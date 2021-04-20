@@ -1,0 +1,50 @@
+.gallery {
+
+  &-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(unit((@width-min/@base),rem), 1fr));
+    gap: var(--space-s);
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &-single-image {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &-caption {
+    font-size: var(--step--1);
+    color: var(--c-grey-x-dark);
+    margin-top: var(--space-xs);
+  }
+
+
+  //styles
+  &--shadow {
+    img {
+      box-shadow: 0 0 10px fade(black, 20%);
+    }
+  }
+
+  &--text,
+  &--full &-caption {
+    #container.flow;
+  }
+
+
+}
+
+@media only screen and (min-width: 750px) {
+  .gallery {
+    &--right {
+      float: right;
+      max-width: unit((@width-min/@base), rem);
+      margin-left: var(--space-m);
+    }
+  }
+}

@@ -1,21 +1,33 @@
-<header class="grid" aria-labelledby="page-title">
+<header aria-labelledby="page-title">
   <h1 id="page-title">{{ title }}</h1>
-  <div class="prose section mid-col-start-2 mid-col-span-10 max-col-start-2 max-col-span-6">
+  <div class="prose prose--flow space--margin-bottom-xxl space--margin-top-xxl">
     <p class="type-lead">{{ introduction }}</p>
   </div>
+  <dl class="meta">
+    <div class="meta-item">
+      <dt>Date</dt>
+      <dd>{{ date }}</dd>
+    </div>
+    <div class="meta-item">
+      <dt>Project length</dt>
+      <dd>{{ project_length }}</dd>
+    </div>
+    <div class="meta-item">
+      <dt>Tags</dt>
+      <dd></dd>
+    </div>
+  </dl>
 </header>
-{{ sections }}
-  <section class="grid section" id="{{ title | slugify }}" aria-labelledby="{{ title | slugify}}--title">
-    <h2 id="{{ title | slugify }}--title" class="section-title mid-col-start-2 mid-col-span-10 max-col-start-2 max-col-span-6">{{ title }}</h2>
-    {{ content }}
-
-      {{ if type === "text" }}
-        {{ variable:classes value="mid-col-start-2 mid-col-span-10 max-col-start-2 max-col-span-6" }}
-      {{ else }}
-        {{ variable:classes value=" " }}  
-      {{ /if }}
-
+<section class="space--margin-top--xxl prose prose--flow">
+  {{ sections }}
+  <h2 id="{{ title | slugify }}--title" class="type-section-title">{{ title }}</h2>
+  {{ content }}
+    {{# spacing for components in this context #}}
+    {{ variable:classes value=" " }}
+    {{ if (type === 'images' && layout != 'right') || type == 'quote' }}
+      {{ variable:classes value="space--margin-top-l" }}
+    {{ /if }}
       {{ partial src="sets/{type}" classes="{variable:classes}" }}
-    {{ /content }}
-  </section> 
+  {{ /content }}
 {{ /sections }}
+</section>

@@ -93,45 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// The debounce function receives our function as a parameter
-var debounce = function debounce(fn) {
-  // This holds the requestAnimationFrame reference, so we can cancel it if we wish
-  var frame; // The debounce function returns a new function that can receive a variable number of arguments
 
-  return function () {
-    for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
-      params[_key] = arguments[_key];
-    }
-
-    // If the frame variable has been defined, clear it now, and queue for next frame
-    if (frame) {
-      cancelAnimationFrame(frame);
-    } // Queue our function call for the next frame
-
-
-    frame = requestAnimationFrame(function () {
-      // Call our function and pass any params we received
-      fn.apply(void 0, params);
-    });
-  };
-};
-
-var onScroll = function onScroll() {
-  var max = 75;
-  var initialSize = 50;
-  var growthFactor = 25;
-  var newWidth = newWidth > max ? max : window.scrollY / growthFactor + initialSize;
-  document.getElementById('square').style.width = "".concat(newWidth, "vw");
-  document.documentElement.dataset.scroll = window.scrollY;
-};
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.body.classList.remove('no-js');
-  document.body.classList.add('js');
-  document.addEventListener('scroll', debounce(onScroll), {
-    passive: true
-  });
-});
 
 /***/ }),
 

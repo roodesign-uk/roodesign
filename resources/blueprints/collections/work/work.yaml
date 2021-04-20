@@ -37,16 +37,6 @@ sections:
                     listable: hidden
                 -
                   import: content
-                -
-                  handle: section_image
-                  field:
-                    display: 'Section image'
-                    type: section
-                    icon: section
-                    instructions: 'An image that sits alongside this section'
-                    listable: hidden
-                -
-                  import: image
           display: Sections
           type: replicator
           icon: replicator
@@ -88,3 +78,29 @@ sections:
             - tags
           display: Tags
           mode: select
+      -
+        handle: homepage
+        field:
+          display: Homepage
+          type: toggle
+          icon: toggle
+          instructions: 'Feature on homepage?'
+          listable: hidden
+      -
+        handle: project_length
+        field:
+          input_type: text
+          antlers: false
+          display: 'Project length'
+          type: text
+          icon: text
+          listable: hidden
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

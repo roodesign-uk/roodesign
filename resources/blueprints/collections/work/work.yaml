@@ -95,12 +95,3 @@ sections:
           type: text
           icon: text
           listable: hidden
-  SEO:
-    display: SEO
-    fields:
-      -
-        handle: seo
-        field:
-          type: seo_pro
-          listable: false
-          display: SEO

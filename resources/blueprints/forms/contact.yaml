@@ -1,0 +1,34 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: your_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Your name'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: email
+        field:
+          input_type: text
+          antlers: false
+          display: 'Your email'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: message
+        field:
+          antlers: false
+          display: Message
+          type: textarea
+          icon: textarea
+          listable: hidden

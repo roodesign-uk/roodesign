@@ -307,8 +307,7 @@ h4 {
   text-decoration: underline;
 }
 .prose a:hover {
-  -webkit-text-decoration: solid underline var(--c-blue) 3px;
-          text-decoration: solid underline var(--c-blue) 3px;
+  text-decoration-thickness: 3px;
 }
 .prose a:focus {
   outline: 3px solid transparent;
@@ -1272,6 +1271,7 @@ h4 {
   }
 }
 .footer {
+  --badge-bg: white;
   margin-top: var(--space-xl);
   margin-bottom: var(--space-xl);
   position: relative;
@@ -1299,12 +1299,11 @@ h4 {
   list-style: none;
 }
 .footer a {
-  color: var(--c-blue);
+  color: black;
   text-decoration: underline;
 }
 .footer a:hover {
-  -webkit-text-decoration: solid underline var(--c-blue) 3px;
-          text-decoration: solid underline var(--c-blue) 3px;
+  text-decoration-thickness: 3px;
 }
 .footer a:focus {
   outline: 3px solid transparent;
@@ -1313,29 +1312,22 @@ h4 {
   text-decoration: none;
   color: black;
 }
+.footer--reverse {
+  --badge-bg: var(--c-purple);
+}
 .footer--reverse a {
-  color: var(--c-blue);
-  text-decoration: underline;
   color: white;
+  text-decoration: underline;
 }
 .footer--reverse a:hover {
-  -webkit-text-decoration: solid underline var(--c-blue) 3px;
-          text-decoration: solid underline var(--c-blue) 3px;
+  text-decoration-thickness: 3px;
 }
 .footer--reverse a:focus {
   outline: 3px solid transparent;
-  background-color: var(--c-yellow);
-  box-shadow: 0 -2px var(--c-yellow), 0 4px black;
-  text-decoration: none;
-  color: black;
-}
-.footer--reverse a:hover {
-  -webkit-text-decoration: solid underline white 3px;
-          text-decoration: solid underline white 3px;
-}
-.footer--reverse a:focus {
   background-color: white;
   box-shadow: 0 -2px white, 0 4px black;
+  text-decoration: none;
+  color: black;
 }
 .gallery-images {
   display: grid;

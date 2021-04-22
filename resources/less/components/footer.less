@@ -1,4 +1,6 @@
 .footer {
+
+  --badge-bg: white;
   
   margin-top: var(--space-xl);
   margin-bottom: var(--space-xl);
@@ -32,11 +34,15 @@
   }
 
   a {
-    #type.style.link;
+    #type.style.link(black);
+  }
+
+  &--reverse {
+    --badge-bg: var(--c-purple);
   }
 
   &--reverse a {
-    #type.style.link-reverse;
+    #type.style.link(white, white);
   }
 
 }

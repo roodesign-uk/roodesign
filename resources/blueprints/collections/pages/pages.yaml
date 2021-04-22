@@ -1,4 +1,4 @@
-title: Article
+title: Pages
 sections:
   main:
     display: Main
@@ -11,9 +11,12 @@ sections:
           validate:
             - required
       -
-        import: seo
+        handle: content
+        field:
+          type: markdown
+          localizable: true
       -
-        import: content
+        import: seo
   sidebar:
     display: Sidebar
     fields:
@@ -26,28 +29,14 @@ sections:
           validate:
             - required
       -
-        handle: template
+        handle: parent
         field:
-          hide_partials: true
-          display: Template
-          type: template
-          icon: template
-          listable: hidden
-      -
-        handle: date
-        field:
-          type: date
-          required: true
-          validate:
-            - required
-      -
-        handle: tags
-        field:
-          type: terms
-          taxonomies:
-            - tags
-          display: Tags
-          mode: select
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
   SEO:
     display: SEO
     fields:

@@ -14,8 +14,8 @@
         <main class="container">
             {{ template_content }}
         </main>
-        <footer class="container footer">
-            <svg width="32" height="38" xmlns="http://www.w3.org/2000/svg" class="footer__badge">
+        <footer class="container footer {{ if template === 'home' }}footer--reverse{{ /if }}">
+            <svg width="32" height="38" xmlns="http://www.w3.org/2000/svg" class="footer-badge">
                 <g fill="none" fill-rule="evenodd">
                     <path stroke="currentColor" d="M15.735 12.4l8.736 8.8-8.736 8.8L7 21.2z"></path>
                     <path stroke="currentColor" d="M20.095 8l4.376 4.405-8.736 8.795L7 12.405 11.375 8l4.36 4.39z"></path>
@@ -29,6 +29,11 @@
                 {{ nav:footer }}
                     <li><a href="{{ url }}">{{ title }}</a></li>
                 {{ /nav:footer }}
+            </ul>
+            <ul class="footer-navigation">
+                {{ nav:social }}
+                    <li><a href="{{ url }}">{{ title }}</a></li>
+                {{ /nav:social }}
             </ul>
         </footer>
         {{# <script src="{{ mix src='/js/site.js' }}"></script> #}}

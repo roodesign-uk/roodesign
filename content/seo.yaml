@@ -1,0 +1,10 @@
+title: '@seo:title'
+description: '@seo:introduction'
+site_name: 'Roodesign: design that just works'
+site_name_position: after
+site_name_separator: '|'
+canonical_url: '@seo:permalink'
+image: '@seo:cover'
+twitter_handle: '@roobottom'
+priority: 0.5
+change_frequency: monthly

@@ -11,13 +11,7 @@ sections:
           validate:
             - required
       -
-        handle: introduction
-        field:
-          antlers: false
-          display: Introduction
-          type: textarea
-          icon: textarea
-          listable: hidden
+        import: seo
       -
         handle: sections
         field:
@@ -95,3 +89,12 @@ sections:
           type: text
           icon: text
           listable: hidden
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

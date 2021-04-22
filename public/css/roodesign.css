@@ -1271,6 +1271,72 @@ h4 {
     margin-bottom: 0;
   }
 }
+.footer {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+.footer-badge {
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  margin-left: -18px;
+  background-color: var(--purple);
+}
+.footer-content {
+  padding-top: var(--space-s);
+  border-top: 1px solid;
+  margin-bottom: var(--space-s);
+}
+.footer-navigation {
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-s);
+}
+.footer-navigation li {
+  margin-right: var(--space-s);
+  list-style: none;
+}
+.footer a {
+  color: var(--c-blue);
+  text-decoration: underline;
+}
+.footer a:hover {
+  -webkit-text-decoration: solid underline var(--c-blue) 3px;
+          text-decoration: solid underline var(--c-blue) 3px;
+}
+.footer a:focus {
+  outline: 3px solid transparent;
+  background-color: var(--c-yellow);
+  box-shadow: 0 -2px var(--c-yellow), 0 4px black;
+  text-decoration: none;
+  color: black;
+}
+.footer--reverse a {
+  color: var(--c-blue);
+  text-decoration: underline;
+  color: white;
+}
+.footer--reverse a:hover {
+  -webkit-text-decoration: solid underline var(--c-blue) 3px;
+          text-decoration: solid underline var(--c-blue) 3px;
+}
+.footer--reverse a:focus {
+  outline: 3px solid transparent;
+  background-color: var(--c-yellow);
+  box-shadow: 0 -2px var(--c-yellow), 0 4px black;
+  text-decoration: none;
+  color: black;
+}
+.footer--reverse a:hover {
+  -webkit-text-decoration: solid underline white 3px;
+          text-decoration: solid underline white 3px;
+}
+.footer--reverse a:focus {
+  background-color: white;
+  box-shadow: 0 -2px white, 0 4px black;
+}
 .gallery-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

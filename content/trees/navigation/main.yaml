@@ -1,13 +1,7 @@
 tree:
   -
-    title: Work
-    url: /work
+    entry: f719c7e5-53b4-4de8-b0b7-4f035516d51d
   -
-    title: Articles
-    url: /articles
+    entry: 8313e3e9-508b-4521-92df-af52c7137561
   -
-    title: About
-    url: /about
-  -
-    title: 'Hire me'
-    url: /contact
+    entry: 7d3c06f2-9a80-4beb-bb71-1984f88f93a0

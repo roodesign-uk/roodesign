@@ -866,6 +866,11 @@ h4 {
     width: calc(100% + (2 * var(--space-xxl)));
   }
 }
+.autogrid {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
 .grid {
   display: grid;
   grid-auto-flow: row;
@@ -1329,11 +1334,6 @@ h4 {
   text-decoration: none;
   color: black;
 }
-.gallery-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: var(--space-s);
-}
 .gallery-images img {
   max-width: 100%;
   display: block;
@@ -1387,6 +1387,54 @@ h4 {
   .quote-cite {
     margin-left: calc(0rem + (84 - 0) * var(--fluid-bp));
   }
+}
+.card {
+  overflow: hidden;
+  transition-property: margin, padding;
+  transition-duration: 0.25s;
+  position: relative;
+  background-color: white;
+  color: black;
+}
+.card-cover {
+  width: calc(100% + (2 * var(--step-0)));
+  margin: calc(-1 * var(--step-0));
+  margin-bottom: 0;
+  background-size: cover;
+  background-position: top center;
+  background-color: var(--c-pink);
+  background-blend-mode: soft-light;
+  background-image: var(--cover);
+  height: 40vh;
+  display: flex;
+  align-items: flex-end;
+}
+.card-cover a {
+  color: white;
+  text-decoration: none;
+}
+.card-cover a:before {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.card-cover h2 {
+  margin: calc(2 * var(--step-0));
+  margin-bottom: var(--step-0);
+  font-family: 'Debut Sans', sans-serif;
+  font-size: var(--step-1);
+  color: white;
+}
+.card:hover {
+  margin: calc(-1 * var(--step-0));
+  padding: var(--step-0);
+}
+.card-content {
+  padding: var(--step-0);
 }
 .template-home {
   background-color: var(--c-purple);

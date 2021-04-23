@@ -1,19 +1,7 @@
 <h1 class="type-mega">{{ title }}</h1>
-<div class="prose prose--flow">{{ content | smartypants }}</div>
-<ul class="cards">
+<h2 class="space--margin-top-xxl">Featured work</h2>
+<div class="autogrid space--margin-top-m">
   {{ collection:work homepage:is="true" }}
-  <li>
-    <div class="card">
-      <header class="card-header">
-      {{ if cover }}
-        <img src="{{ glide:cover square="480" filter="greyscale" }}" aria-hidden="true" class="card-cover">
-      {{ /if }}
-        <h2><a href="{{ url }}">{{ title }}</a></h2>
-      </header>
-      <div class="card-content">
-        {{ introduction | smartypants }}
-      </div>
-    </div>
-  </li>
+    {{ partial:card }}
   {{ /collection:work}}
-</ul>
+</div>

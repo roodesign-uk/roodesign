@@ -1,6 +1,6 @@
 <figure class="gallery {{ classes }} {{ style }}gallery--{{ value }} {{ /style }} gallery--{{ layout }}">
   
-  <div class="{{ if assets | length > 1 }}gallery-images{{ else }}gallery-single-image{{ /if }} {{ if layout === 'right'}}max-bleed-left-s{{ /if }} {{ if layout === 'text'}}max-bleed-right-xl{{ /if }}">
+  <div class="{{ if assets | length > 1 }}gallery-images autogrid{{ else }}gallery-single-image{{ /if }} {{ if layout === 'right'}}max-bleed-left-s{{ /if }} {{ if layout === 'text'}}max-bleed-right-xl{{ /if }}">
   {{ assets }}
     <img src="{{ url }}" alt="{{ alt }}">
   {{ /assets }}

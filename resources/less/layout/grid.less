@@ -29,6 +29,11 @@
 
 }
 
+.autogrid {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fit, minmax(unit((@width-min/@base),rem), 1fr));
+}
 
 .grid {
 

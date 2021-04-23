@@ -1,0 +1,56 @@
+.card {
+  overflow: hidden;
+  transition-property: margin, padding;
+  transition-duration: 0.25s;
+  position: relative; 
+  background-color: white;
+  color: black;
+
+  &-cover {
+    width: calc(100% + (2 * var(--step-0)));
+    margin: calc(-1 * var(--step-0));
+    margin-bottom: 0;
+    background-size: cover;
+    background-position: top center;
+    background-color: var(--c-pink);
+    background-blend-mode: soft-light;
+    background-image: var(--cover);
+    height: 40vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    a {
+      color: white;
+      text-decoration: none;
+      &:before {
+        content: "";
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+    }
+    
+    h2 {
+      margin: calc(2 * var(--step-0));
+      margin-bottom: var(--step-0);
+      #type.family.sans;
+      font-size: var(--step-1);
+      color: white;
+      
+    }
+  }
+
+  &:hover {
+    margin: calc(-1 * var(--step-0));
+    padding: var(--step-0);
+  }
+
+  &-content {
+    padding: var(--step-0);
+  }
+
+}

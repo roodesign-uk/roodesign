@@ -1,6 +1,6 @@
 <h1>{{ title }}</h1>
-<ul>
+<div class="space--margin-top-xl autogrid">
 {{ collection:work }}
-  <li><a href="{{ url }}">{{ title }}</a></li>
+  {{ partial:card }}
 {{ /collection:work }}
-</ul>
+</div>

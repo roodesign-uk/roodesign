@@ -12,11 +12,7 @@
     }
 
     a {
-        text-decoration: none;
-        color: var(--c-grey-x-dark);
-        &:focus {
-            outline: 3px solid;
-        }
+        #type.style.link(black);
     }
 
     &__logo {
@@ -32,7 +28,7 @@
     .active {
         font-weight: bold;
         position: relative;
-        text-shadow: 2px 0 0 white;
+        text-shadow: 1px 0 0 white;
         &:after {
             content: "";
             display: block;
@@ -41,7 +37,7 @@
             left: 0;
             height: 8px;
             width: 100%;
-            background: var(--c-yellow);
+            background: var(--c-pink);
             z-index: -1;
         }
         
@@ -53,7 +49,7 @@
 
     //reverse
     &--reverse a {
-        color: white;
+        #type.style.link(white,white);
     }
 
 }

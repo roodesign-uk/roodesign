@@ -260,7 +260,7 @@ h4 {
 h1,
 .h1 {
   font-family: 'Young Serif', serif;
-  font-size: calc(2.64375rem + (130.03 - 42.3) * var(--fluid-bp));
+  font-size: calc(2.64375rem + (90.3 - 42.3) * var(--fluid-bp));
 }
 h2 {
   font-size: var(--step-4);
@@ -1226,11 +1226,18 @@ h4 {
   margin-bottom: var(--space-xxs);
 }
 .navigation a {
-  text-decoration: none;
-  color: var(--c-grey-x-dark);
+  color: black;
+  text-decoration: underline;
+}
+.navigation a:hover {
+  text-decoration-thickness: 3px;
 }
 .navigation a:focus {
-  outline: 3px solid;
+  outline: 3px solid transparent;
+  background-color: var(--c-yellow);
+  box-shadow: 0 -2px var(--c-yellow), 0 4px black;
+  text-decoration: none;
+  color: black;
 }
 .navigation__logo {
   display: flex;
@@ -1243,7 +1250,7 @@ h4 {
 .navigation .active {
   font-weight: bold;
   position: relative;
-  text-shadow: 2px 0 0 white;
+  text-shadow: 1px 0 0 white;
 }
 .navigation .active:after {
   content: "";
@@ -1253,7 +1260,7 @@ h4 {
   left: 0;
   height: 8px;
   width: 100%;
-  background: var(--c-yellow);
+  background: var(--c-pink);
   z-index: -1;
 }
 .navigation__items {
@@ -1261,6 +1268,17 @@ h4 {
 }
 .navigation--reverse a {
   color: white;
+  text-decoration: underline;
+}
+.navigation--reverse a:hover {
+  text-decoration-thickness: 3px;
+}
+.navigation--reverse a:focus {
+  outline: 3px solid transparent;
+  background-color: white;
+  box-shadow: 0 -2px white, 0 4px black;
+  text-decoration: none;
+  color: black;
 }
 @media only screen and (min-width: 520px) {
   .navigation {
@@ -1395,6 +1413,7 @@ h4 {
   position: relative;
   background-color: white;
   color: black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .card-cover {
   width: calc(100% + (2 * var(--step-0)));

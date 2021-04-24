@@ -1,8 +1,8 @@
-<div class="card">
+<article class="card">
   <header class="card-cover" {{ if cover }}style="--cover: url({{ glide:cover square="480" filter="greyscale" }});"{{ /if }}>
-    <h2 class="card-title"><a href="{{ url }}">{{ title }}</a></h2>
+    <{{ h or 'h2' }} class="card-title"><a href="{{ url }}">{{ title }}</a></{{ h or 'h2' }}>
   </header>
   <div class="card-content">
     {{ introduction | smartypants }}
   </div>
-</div>
+</article>

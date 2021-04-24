@@ -1,7 +1,7 @@
 <h1 class="type-mega">{{ title }}</h1>
 <h2 class="space--margin-top-xxl">Featured work</h2>
-<div class="autogrid space--margin-top-m">
+<ul class="autogrid space--margin-top-m">
   {{ collection:work homepage:is="true" }}
-    {{ partial:card }}
+    <li class="autogrid-item">{{ partial:card h="h3" }}</li>
   {{ /collection:work}}
-</div>
+</ul>

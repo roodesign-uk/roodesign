@@ -1,3 +1,13 @@
+<header aria-labelledby="page-title">
+  <h1 id="page-title">{{ title }}</h1>
+</header>
+<section class="space--margin-top--xxl prose prose--flow">
 {{ content }}
-  {{ partial src="sets/{type}" }}
+  {{# spacing for components in this context #}}
+  {{ variable:classes value=" " }}
+  {{ if (type === 'images' && layout != 'right') || type == 'quote' }}
+    {{ variable:classes value="space--margin-top-l" }}
+  {{ /if }}
+    {{ partial src="sets/{type}" classes="{variable:classes}" }}
 {{ /content }}
+</section>

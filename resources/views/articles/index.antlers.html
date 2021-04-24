@@ -1,6 +1,18 @@
 <h1>{{ title }}</h1>
 <ul>
   {{ collection:articles }}
-    <li><a href="{{ url }}">{{ title }}</a></li>
+    <li>
+      <article class="summary">
+        <header class="summary-header">
+          <{{ h or 'h2' }}><a href="{{ url }}">{{ title }}</a></{{ h or 'h2' }}>
+        </header>
+        <div class="summary-content prose">
+          <p>{{ introduction }}</p>
+        </div>
+        <footer class="summary-footer">
+          <time datetime="{{ date | format="Y-m-d" }}">{{ date }}</time>
+        </footer>
+      </article>
+    </li>
   {{ /collection:articles }}
 </ul>

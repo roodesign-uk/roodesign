@@ -312,6 +312,7 @@ h4 {
 }
 .prose a:focus {
   outline: 2px solid var(--c-pink);
+  text-decoration: none;
 }
 .prose--flow > p,
 .prose--flow > ul,
@@ -1232,6 +1233,7 @@ h4 {
 }
 .navigation a:focus {
   outline: 2px solid var(--c-pink);
+  text-decoration: none;
 }
 .navigation__logo {
   display: flex;
@@ -1257,6 +1259,7 @@ h4 {
 }
 .navigation--reverse a:focus {
   outline: 2px solid white;
+  text-decoration: none;
 }
 @media only screen and (min-width: 520px) {
   .navigation {
@@ -1309,6 +1312,7 @@ h4 {
 }
 .footer a:focus {
   outline: 2px solid var(--c-pink);
+  text-decoration: none;
 }
 .footer--reverse {
   --badge-bg: var(--c-purple);
@@ -1322,6 +1326,7 @@ h4 {
 }
 .footer--reverse a:focus {
   outline: 2px solid white;
+  text-decoration: none;
 }
 .gallery-images img {
   max-width: 100%;

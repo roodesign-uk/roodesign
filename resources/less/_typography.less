@@ -30,18 +30,14 @@
 
 #type {
     .style() {
-        .link(@color: var(--c-blue), @focus: var(--c-yellow)) {
+        .link(@color: var(--c-blue), @focus: var(--c-pink)) {
             color: @color;
             text-decoration: underline;
             &:hover {
                 text-decoration-thickness: 3px;
             }
             &:focus {
-                outline: 3px solid transparent;
-                background-color: @focus;
-                box-shadow: 0 -2px @focus, 0 4px black;
-                text-decoration: none;
-                color: black;
+                outline: 2px solid @focus;
             }
         }
     }

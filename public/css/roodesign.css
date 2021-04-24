@@ -170,6 +170,7 @@ a img {
   --c-pink: #A313D0;
   --c-yellow: #EDBB4A;
   --c-blue: #004ADB;
+  --c-pink-light: #F2C9FF;
 }
 @media screen and (min-width: 1200px) {
   :root {
@@ -310,11 +311,7 @@ h4 {
   text-decoration-thickness: 3px;
 }
 .prose a:focus {
-  outline: 3px solid transparent;
-  background-color: var(--c-yellow);
-  box-shadow: 0 -2px var(--c-yellow), 0 4px black;
-  text-decoration: none;
-  color: black;
+  outline: 2px solid var(--c-pink);
 }
 .prose--flow > p,
 .prose--flow > ul,
@@ -1228,16 +1225,13 @@ h4 {
 .navigation a {
   color: black;
   text-decoration: underline;
+  padding: var(--space-xxs);
 }
 .navigation a:hover {
   text-decoration-thickness: 3px;
 }
 .navigation a:focus {
-  outline: 3px solid transparent;
-  background-color: var(--c-yellow);
-  box-shadow: 0 -2px var(--c-yellow), 0 4px black;
-  text-decoration: none;
-  color: black;
+  outline: 2px solid var(--c-pink);
 }
 .navigation__logo {
   display: flex;
@@ -1249,19 +1243,7 @@ h4 {
 }
 .navigation .active {
   font-weight: bold;
-  position: relative;
-  text-shadow: 1px 0 0 white;
-}
-.navigation .active:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 8px;
-  width: 100%;
-  background: var(--c-pink);
-  z-index: -1;
+  text-decoration: none;
 }
 .navigation__items {
   text-align: right;
@@ -1274,11 +1256,7 @@ h4 {
   text-decoration-thickness: 3px;
 }
 .navigation--reverse a:focus {
-  outline: 3px solid transparent;
-  background-color: white;
-  box-shadow: 0 -2px white, 0 4px black;
-  text-decoration: none;
-  color: black;
+  outline: 2px solid white;
 }
 @media only screen and (min-width: 520px) {
   .navigation {
@@ -1324,16 +1302,13 @@ h4 {
 .footer a {
   color: black;
   text-decoration: underline;
+  padding: var(--space-xxs);
 }
 .footer a:hover {
   text-decoration-thickness: 3px;
 }
 .footer a:focus {
-  outline: 3px solid transparent;
-  background-color: var(--c-yellow);
-  box-shadow: 0 -2px var(--c-yellow), 0 4px black;
-  text-decoration: none;
-  color: black;
+  outline: 2px solid var(--c-pink);
 }
 .footer--reverse {
   --badge-bg: var(--c-purple);
@@ -1346,11 +1321,7 @@ h4 {
   text-decoration-thickness: 3px;
 }
 .footer--reverse a:focus {
-  outline: 3px solid transparent;
-  background-color: white;
-  box-shadow: 0 -2px white, 0 4px black;
-  text-decoration: none;
-  color: black;
+  outline: 2px solid white;
 }
 .gallery-images img {
   max-width: 100%;
@@ -1440,6 +1411,9 @@ h4 {
   bottom: 0;
   right: 0;
   position: absolute;
+}
+.card-cover a:focus:before {
+  box-shadow: inset 0 0 0 2px white, inset 0 0 0 6px var(--c-pink);
 }
 .card-cover h2 {
   margin: calc(2 * var(--step-0));

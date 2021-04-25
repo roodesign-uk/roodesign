@@ -1,0 +1,18 @@
+.summary {
+  display: grid;
+  grid-template-areas: 
+    "date | title"
+    ". | content";
+  gap: var(--space-s);
+
+  &-header {
+    grid-area: "title";
+  }
+  &-footer {
+    grid-area: "date";
+  }
+  &-content {
+    grid-area: "content";
+  }
+
+}

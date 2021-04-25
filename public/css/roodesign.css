@@ -1443,10 +1443,27 @@ h4 {
 .card-content {
   padding: var(--step-0);
 }
+.summary {
+  display: grid;
+  grid-template-areas: "date | title" ". | content";
+  gap: var(--space-s);
+}
+.summary-header {
+  grid-area: "title";
+}
+.summary-footer {
+  grid-area: "date";
+}
+.summary-content {
+  grid-area: "content";
+}
 .template-home {
   background-color: var(--c-purple);
+}
+.template-home,
+.template-home a {
   color: white;
 }
 .template-home h1 {
-  text-shadow: 0 0.05ch 0.05ch rgba(0, 0, 0, 0.34);
+  text-shadow: 0 0.05em 0 rgba(0, 0, 0, 0.3);
 }

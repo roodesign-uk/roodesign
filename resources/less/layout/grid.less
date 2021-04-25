@@ -30,15 +30,20 @@
 }
 
 .autogrid {
+  list-style: none;
   display: grid;
   gap: var(--space-m);
-  grid-template-columns: repeat(auto-fit, minmax(unit((280/@base),rem), 1fr));
-  list-style: none;
+}
 
-  &-item {
-    display: flex;
+@media @bp[min] {
+  .autogrid {
+    grid-template-columns: repeat(auto-fit, minmax(unit((280/@base),rem), 1fr));
+
+    &-item {
+      display: flex;
+    }
+
   }
-
 }
 
 .grid {

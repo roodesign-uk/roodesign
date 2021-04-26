@@ -1,8 +1,10 @@
 <h1 class="type-mega">{{ title }}</h1>
 <h2 class="space--margin-top-xxl h3">Featured work</h2>
-<ul class="autogrid space--margin-top-m">
+<ul class="list list--grid space--margin-top-m">
   {{ collection:work homepage:is="true" }}
-    <li class="autogrid-item">{{ partial:card h="h3" }}</li>
+    <li class="list-item">{{ partial:card h="h3" }}</li>
   {{ /collection:work}}
 </ul>
-<a href="/work" class="margin-top-s">See all work</a>
+<div class="prose prose--reverse space--margin-top-s">
+  <p><a href="/work">See all<span class="visually-hidden"> work</span></a></p>
+</div>

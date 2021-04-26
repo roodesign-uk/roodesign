@@ -1,0 +1,35 @@
+title: Code
+fields:
+  -
+    handle: code
+    field:
+      theme: material
+      mode: htmlmixed
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      display: Code
+      type: code
+      icon: code
+      listable: hidden
+  -
+    handle: language
+    field:
+      options:
+        markup: 'XML based (HTML, svg, etc)'
+        css: CSS
+        less: 'Less CSS'
+        javascript: Javascript
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: true
+      push_tags: false
+      cast_booleans: false
+      display: Language
+      type: select
+      icon: select
+      listable: hidden

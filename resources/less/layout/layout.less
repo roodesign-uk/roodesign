@@ -29,20 +29,31 @@
 
 }
 
-.autogrid {
+.list {
   list-style: none;
-  display: grid;
   gap: var(--space-m);
+
+  &:not(.list--grid) &-item {
+    padding-bottom: var(--space-s);
+    margin-bottom: var(--space-m);
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--c-grey-light);
+    }
+    
+  }
 }
 
+
 @media @bp[min] {
-  .autogrid {
-    grid-template-columns: repeat(auto-fit, minmax(unit((280/@base),rem), 1fr));
-
-    &-item {
-      display: flex;
+  .list--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(unit((220/@base),rem), 1fr));
+  }
+  .list--grid .list-item {
+    display: flex;
+    >* {
+      flex: 1;
     }
-
   }
 }
 

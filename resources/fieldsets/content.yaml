@@ -20,6 +20,11 @@ fields:
           fields:
             -
               import: outcomes
+        code:
+          display: Code
+          fields:
+            -
+              import: code
       buttons:
         - bold
         - italic
@@ -31,7 +36,6 @@ fields:
         - table
         - strikethrough
         - code
-        - codeblock
         - horizontalrule
         - h4
         - h3

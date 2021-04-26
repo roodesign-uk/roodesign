@@ -10,14 +10,14 @@
 #container {
   .flow() {
     #container.line-length;
-    @media @bp[max] {
-      #container.indent;
-    }
+    #container.indent;
   }
   .line-length() {
     max-width: var(--line-length);
   }
   .indent() {
-    #space > .range(margin-left, none, xl);
+    @media @bp[max] {
+      #space > .range(margin-left, none, xl);
+    }
   }
 }

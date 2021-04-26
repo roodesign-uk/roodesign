@@ -30,9 +30,11 @@
 
 #type {
     .style() {
-        .link(@color: var(--c-blue), @focus: var(--c-pink)) {
+        .link(@color: var(--c-blue), @focus: var(--c-blue)) {
             color: @color;
             text-decoration: underline;
+            padding: var(--space-xxs);
+            margin: calc(-1 * var(--space-xxs));
             &:hover {
                 text-decoration-thickness: 3px;
             }
@@ -48,6 +50,9 @@
         }
         .serif() {
             font-family: 'Young Serif', serif;
+        }
+        .mono() {
+            font-family: 'DM Mono', monospace;
         }
     }
 }
@@ -85,6 +90,8 @@
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+
 //global typographic settings
 
 body{
@@ -114,6 +121,28 @@ h3 {
 
 h4 {
     font-size: var(--step-0);    
+}
+
+code {
+    #type.family.mono;
+    font-size: 90%;
+}
+
+p code {
+    background-color: var(--c-grey-x-light);
+    padding: 0.2em;
+    margin: -0.2em;
+}
+
+pre {
+    padding: var(--space-s);
+    background-color: var(--c-grey-x-light);
+    overflow-x: scroll;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px dashed var(--c-grey-light);
 }
 
 
@@ -164,14 +193,30 @@ h4 {
         #type.style.link;
     }
 
+    blockquote:not(.quote) {
+        padding-left: 1em;
+        border-left: 3px solid var(--c-grey-light);
+    }
+
     //autolayout
     &--flow {
         >p,
         >ul,
         >ol,
         >table,
-        >h2,>h3,>h4,>h5,>h6 {
+        >h2,>h3,>h4,>h5,>h6,
+        blockquote:not(.quote) {
             #container.flow;
+        }
+        pre {
+            #container.indent;
+        }
+    }
+
+    &--reverse {
+        color: white;
+        a {
+            #type.style.link(white,white); 
         }
     }
 

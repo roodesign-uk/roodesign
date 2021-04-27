@@ -429,6 +429,9 @@ hr {
     margin-left: calc(0rem + (84 - 0) * var(--fluid-bp));
   }
 }
+footer {
+  clear: both;
+}
 :root {
   --space-xxs: calc(0.265625rem + (5.25 - 4.25) * var(--fluid-bp));
 }
@@ -1686,7 +1689,4 @@ hr {
 .template-home,
 .template-home a {
   color: white;
-}
-.template-home h1 {
-  text-shadow: 0 0.05em 0.025em rgba(0, 0, 0, 0.1), 0 -3px 1px rgba(0, 0, 0, 0.1);
 }

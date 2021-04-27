@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Two side-by-side screenshots showing pattern overrides in Sketch'
 size: 33361
 last_modified: 1619475599
 width: 800

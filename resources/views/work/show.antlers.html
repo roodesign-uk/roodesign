@@ -1,22 +1,22 @@
-<header aria-labelledby="page-title">
-  <h1 id="page-title">{{ title }}</h1>
-  <div class="prose prose--flow space--margin-bottom-l space--margin-top-l">
-    <dl class="meta">
-      <div class="meta-item">
-        <dt>Date</dt>
-        <dd>{{ date }}</dd>
-      </div>
-      <div class="meta-item">
-        <dt>Project length</dt>
-        <dd>{{ project_length }}</dd>
-      </div>
-      <div class="meta-item">
-        <dt>Tags</dt>
-        <dd></dd>
-      </div>
-    </dl>
+<header aria-labelledby="page-title" class="contain-indent">
+  <h1 id="page-title" class="space--margin-bottom-s">{{ title }}</h1>
+  <div class="prose space--margin-bottom-l">
     <p class="type-lead">{{ introduction }}</p>
-  </div> 
+  </div>
+  <dl class="meta space--margin-bottom-l">
+    <div class="meta-item">
+      <dt>Start date</dt>
+      <dd>{{ date format="F Y" }}</dd>
+    </div>
+    <div class="meta-item">
+      <dt>Project length</dt>
+      <dd>{{ project_length }}</dd>
+    </div>
+    <div class="meta-item">
+      <dt>Tags</dt>
+      <dd>{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
+    </div>
+  </dl> 
 </header>
 <section class="space--margin-top--xxl prose prose--flow">
   {{ sections }}
@@ -25,7 +25,7 @@
     {{# spacing for components in this context #}}
     {{ variable:classes value=" " }}
     {{ if (type === 'images' && layout != 'right') || type == 'quote' }}
-      {{ variable:classes value="space--margin-top-l" }}
+      {{ variable:classes value="space--margin-top-m" }}
     {{ /if }}
       {{ partial src="sets/{type}" classes="{variable:classes}" }}
   {{ /content }}

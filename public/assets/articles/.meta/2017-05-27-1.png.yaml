@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'A screenshot of the patterns and parts interface in Sketch'
 size: 33453
 last_modified: 1619475598
 width: 810

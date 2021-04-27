@@ -9,3 +9,7 @@ preferences:
   collections:
     work:
       after_save: continue_editing
+    articles:
+      columns:
+        - title
+        - date

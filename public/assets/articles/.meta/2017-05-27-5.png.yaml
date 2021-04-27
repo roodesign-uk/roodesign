@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Two side-by-side screenshots showing the process of overriding the colour of a button within Sketch.'
 size: 31480
 last_modified: 1619475599
 width: 800

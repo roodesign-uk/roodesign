@@ -39,6 +39,7 @@ fields:
         - horizontalrule
         - h4
         - h3
+        - h2
       save_html: false
       toolbar_mode: fixed
       link_noopener: false

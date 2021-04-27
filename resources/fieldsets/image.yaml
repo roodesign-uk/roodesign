@@ -28,7 +28,8 @@ fields:
       options:
         full: 'Full width'
         text: 'Text width'
-        right: 'To the right of text'
+        right: 'To the right of the text'
+        left: 'To the left of the text'
       multiple: false
       clearable: false
       searchable: true

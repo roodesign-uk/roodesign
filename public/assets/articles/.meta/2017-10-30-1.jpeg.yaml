@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'A sign reads "Barbican Centre"'
 size: 849493
 last_modified: 1619475599
 width: 2000

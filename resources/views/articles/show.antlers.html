@@ -1,12 +1,27 @@
-<header aria-labelledby="page-title" class="space--margin-bottom-l">
-  <h1 id="page-title">{{ title }}</h1>
+<header aria-labelledby="page-title" class="contain-indent">
+  <h1 id="page-title" class="space--margin-bottom-s">{{ title }}</h1>
+  <div class="prose space--margin-bottom-l">
+    <p class="type-lead">{{ introduction }}</p>
+  </div>
+  <dl class="meta space--margin-bottom-l">
+    <div class="meta-item">
+      <dt>Date</dt>
+      <dd>{{ date format="d F Y" }}</dd>
+    </div>
+    {{ if tags }}
+    <div class="meta-item">
+      <dt>Tags</dt>
+      <dd>{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
+    </div>
+    {{ /if }}
+  </dl>
 </header>
 <section class="prose prose--flow space--margin-bottom-xxl">
 {{ content }}
   {{# spacing for components in this context #}}
   {{ variable:classes value=" " }}
   {{ if (type === 'images' && layout != 'right') || type == 'quote' }}
-    {{ variable:classes value="space--margin-top-l" }}
+    {{ variable:classes value="space--margin-top-m" }}
   {{ /if }}
     {{ partial src="sets/{type}" classes="{variable:classes}" }}
 {{ /content }}

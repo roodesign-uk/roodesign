@@ -25,6 +25,11 @@ fields:
           fields:
             -
               import: code
+        screenshots:
+          display: Screenshots
+          fields:
+            -
+              import: screenshots
       buttons:
         - bold
         - italic

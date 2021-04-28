@@ -1,0 +1,16 @@
+<figure class="screenshots">
+  {{ screenshots }}
+    <div class="screenshots-item screenshots-item--{{ frame }}">
+      {{ image }}
+        {{ if frame === 'mobile' }}
+          <img src="{{ glide:url width="400" }}" alt="{{ alt }}"/>
+        {{ else }}
+        <img src="{{ glide:url width="800" }}" alt="{{ alt }}"/>
+        {{ /if }}
+      {{ /image }}
+    </div>
+  {{ /screenshots }}
+  <figcaption class="screenshots-caption prose--flow">
+    {{ caption }}
+  </figcaption>
+</figure>

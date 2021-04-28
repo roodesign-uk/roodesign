@@ -1,6 +1,4 @@
 <blockquote class="quote {{ classes }}">
-  <div class="quote-content">
-    {{ content | smartypants }}
-  </div>
+  <div class="quote-content">{{ content | smartypants }}</div>
   <cite class="quote-cite"><strong>{{ person }}</strong>{{ if role }}, {{ role }}{{ /if }}</cite>
 </blockquote>

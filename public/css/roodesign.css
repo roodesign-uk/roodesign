@@ -321,10 +321,14 @@ hr {
 .prose > h4 + p {
   margin-top: var(--space-xs);
 }
-.prose li + li {
+.prose > h2 + h3,
+.prose > h2 + h4 {
+  margin-top: var(--space-s);
+}
+.prose li + li:not(.list-item) {
   margin-top: var(--space-xs);
 }
-.prose li {
+.prose li:not(.list-item) {
   margin-left: 1em;
   padding-left: var(--space-xs);
 }
@@ -1444,6 +1448,10 @@ footer {
 .gallery--shadow img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.gallery--stage .gallery-images {
+  padding: var(--space-m);
+  background: #222 url('/css/images/pattern-roo-white-10.svg') top left repeat;
+}
 .gallery--text,
 .gallery--full .gallery-caption {
   max-width: var(--line-length);
@@ -1682,6 +1690,20 @@ footer {
   .meta-item:not(:last-child) {
     margin-right: 0;
   }
+}
+.outcomes {
+  border: 1px solid var(--c-grey-light);
+  padding: var(--space-s);
+}
+.outcomes-footer {
+  background-color: var(--c-grey-x-light);
+  padding: var(--space-xs) var(--space-s);
+  margin: calc(-1 * var(--space-s));
+  margin-top: var(--space-m);
+  font-size: var(--step--1);
+}
+.outcomes-footer > * {
+  max-width: var(--line-length);
 }
 .template-home {
   background-color: var(--c-purple);

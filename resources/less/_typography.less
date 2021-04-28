@@ -175,12 +175,16 @@ hr {
     >h4+p {
         margin-top: var(--space-xs);
     }
+    >h2+h3,
+    >h2+h4 {
+        margin-top: var(--space-s);
+    }
 
-    li+li {
+    li+li:not(.list-item) {
         margin-top: var(--space-xs);
     }
 
-    li {
+    li:not(.list-item) {
         margin-left: 1em;
         padding-left: var(--space-xs);
     }

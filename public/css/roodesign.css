@@ -349,7 +349,7 @@ hr {
   border-left: 3px solid var(--c-grey-light);
 }
 .prose--flow > p,
-.prose--flow > ul,
+.prose--flow > ul:not(.list),
 .prose--flow > ol,
 .prose--flow > table,
 .prose--flow > h2,
@@ -362,7 +362,7 @@ hr {
 }
 @media only screen and (min-width: 980px) {
   .prose--flow > p,
-  .prose--flow > ul,
+  .prose--flow > ul:not(.list),
   .prose--flow > ol,
   .prose--flow > table,
   .prose--flow > h2,

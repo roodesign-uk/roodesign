@@ -2,17 +2,7 @@
 <ul class="list">
   {{ collection:articles }}
     <li class="list-item">
-      <article class="summary">
-        <header class="summary-header">
-          <{{ h or 'h2' }} class="summary-title"><a href="{{ url }}" class="summary-link">{{ title }}</a></{{ h or 'h2' }}>
-        </header>
-        <div class="summary-content prose">
-          <p>{{ introduction }}</p>
-        </div>
-        <footer class="summary-footer">
-          <time datetime="{{ date format="Y-m-d" }}" class="summary-date">{{ date format="j F Y" }}</time>
-        </footer>
-      </article>
+      {{ partial:summary }}
     </li>
   {{ /collection:articles }}
 </ul>

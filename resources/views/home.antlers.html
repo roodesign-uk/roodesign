@@ -1,10 +1,11 @@
 <h1 class="type-mega">{{ title }}</h1>
+<div class="prose contain-line-length space--margin-top-s">
+  {{ content }}
+</div>
 <h2 class="space--margin-top-xxl h3">Featured work</h2>
 <ul class="list list--grid space--margin-top-m">
   {{ collection:work homepage:is="true" }}
     <li class="list-item">{{ partial:card h="h3" }}</li>
   {{ /collection:work}}
 </ul>
-<div class="prose prose--reverse space--margin-top-s">
-  <p><a href="/work">See all<span class="visually-hidden"> work</span></a></p>
-</div>
+<a href="/work" class="button button--reverse space--margin-top-m">See all my work</a>

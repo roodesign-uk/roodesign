@@ -165,6 +165,7 @@ a img {
   --line-height: 1.5;
   --line-height--loose: 1.75;
   --line-height--tight: 1.1;
+  --line-height--supertight: 0.9;
   --c-grey-x-dark: #333333;
   --c-grey-dark: #555555;
   --c-grey-light: #CCCCCC;
@@ -306,6 +307,7 @@ hr {
 }
 .type-mega {
   font-size: calc(4.56875rem + (187.24 - 73.1) * var(--fluid-bp));
+  line-height: var(--line-height--supertight);
 }
 .prose > * + * {
   margin-top: var(--space-s);
@@ -1691,10 +1693,6 @@ footer {
     margin-right: 0;
   }
 }
-.outcomes {
-  border: 1px solid var(--c-grey-light);
-  padding: var(--space-s);
-}
 .outcomes-footer {
   background-color: var(--c-grey-x-light);
   padding: var(--space-xs) var(--space-s);
@@ -1704,6 +1702,22 @@ footer {
 }
 .outcomes-footer > * {
   max-width: var(--line-length);
+}
+.button {
+  border: 1px solid;
+  padding: var(--space-m);
+  display: inline-block;
+  color: var(--c-blue);
+  text-decoration: underline;
+  padding: var(--space-xxs);
+  margin: calc(-1 * var(--space-xxs));
+}
+.button:hover {
+  text-decoration-thickness: 3px;
+}
+.button:focus {
+  outline: 2px solid var(--c-blue);
+  text-decoration: none;
 }
 .template-home {
   background-color: var(--c-purple);

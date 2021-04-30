@@ -21,13 +21,6 @@
 <section class="space--margin-top--xxl prose prose--flow">
   {{ sections }}
   <h2 id="{{ title | slugify }}--title" class="type-section-title">{{ title }}</h2>
-  {{ content }}
-    {{# spacing for components in this context #}}
-    {{ variable:classes value=" " }}
-    {{ if (type === 'images' && layout != 'right') || type == 'quote' }}
-      {{ variable:classes value="space--margin-top-m" }}
-    {{ /if }}
-      {{ partial src="sets/{type}" classes="{variable:classes}" }}
-  {{ /content }}
+  {{ partial:content }}
 {{ /sections }}
 </section>

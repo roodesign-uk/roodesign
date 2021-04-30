@@ -1,0 +1,10 @@
+{{ content }}
+  {{# spacing for components in this context #}}
+  {{ variable:classes value=" " }}
+  {{ if type === 'images' && (layout != 'right' || layout != 'left') }}
+    {{ variable:classes value="space--margin-top-m" }}
+  {{ elseif (type === 'quote') }}
+    {{ variable:classes value="space--margin-top-xl" }}
+  {{ /if }}
+    {{ partial src="sets/{type}" classes="{variable:classes}" }}
+{{ /content }}

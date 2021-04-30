@@ -17,14 +17,7 @@
   </dl>
 </header>
 <section class="prose prose--flow space--margin-bottom-xxl">
-{{ content }}
-  {{# spacing for components in this context #}}
-  {{ variable:classes value=" " }}
-  {{ if (type === 'images' && layout != 'right') || type == 'quote' }}
-    {{ variable:classes value="space--margin-top-m" }}
-  {{ /if }}
-    {{ partial src="sets/{type}" classes="{variable:classes}" }}
-{{ /content }}
+  {{ partial:content }}
 </section>
 <hr class="space--margin-bottom-m">
 <h2 class="space--margin-bottom-m">You may also like</h2>

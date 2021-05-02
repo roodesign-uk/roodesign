@@ -306,7 +306,7 @@ hr {
   font-size: var(--step-1);
 }
 .type-mega {
-  font-size: calc(4.56875rem + (187.24 - 73.1) * var(--fluid-bp));
+  font-size: calc(3.806875rem + (187.24 - 60.91) * var(--fluid-bp));
   line-height: var(--line-height--supertight);
 }
 .prose > * + * {

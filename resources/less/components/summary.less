@@ -12,8 +12,16 @@
     #type.style.link;
   }
 
-  &-date {
+  &-date,
+  &-type {
     color: var(--c-grey-dark);
+  }
+
+  &-type {
+    display: block;
+    a {
+      #type.style.link(var(--c-grey-dark), var(--c-grey-dark));
+    }
   }
 
   &-content {

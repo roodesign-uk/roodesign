@@ -28,11 +28,13 @@
                 <p>&copy; Roodesign Limited</p>
                 <p>Registered in England and Wales with company number 11770882</p>
             </div>
+            <span class="footer-title">Explore this site by subject:</span>
             <ul class="footer-navigation">
-                {{ nav:footer }}
+                {{ taxonomy:subjects }}
                     <li><a href="{{ url }}">{{ title }}</a></li>
-                {{ /nav:footer }}
+                {{ /taxonomy:subjects }}
             </ul>
+            <span class="footer-title">Find Roodesign elsewhere on the web:</span>
             <ul class="footer-navigation">
                 {{ nav:social }}
                     <li><a href="{{ url }}">{{ title }}</a></li>

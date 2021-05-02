@@ -8,10 +8,10 @@
       <dt>Date</dt>
       <dd>{{ date format="d F Y" }}</dd>
     </div>
-    {{ if tags }}
+    {{ if subjects }}
     <div class="meta-item">
-      <dt>Tags</dt>
-      <dd>{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
+      <dt>Subjects</dt>
+      <dd>{{ subjects }}#<a href="/subjects/{{ slug }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /subjects }}</dd>
     </div>
     {{ /if }}
   </dl>

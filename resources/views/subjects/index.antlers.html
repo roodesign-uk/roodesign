@@ -1,8 +1,8 @@
 <h1 class="space--margin-bottom-l">{{ title }}</h1>
-<ul class="list">
+<ul class="list list--grid">
   {{ terms }}
     <li class="list-item">
-      {{ partial:summary :introduction="content"  }}
+      {{ partial:card :introduction="content"  }}
     </li>
   {{ /terms }}
 </ul>

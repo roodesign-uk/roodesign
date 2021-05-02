@@ -1,4 +1,4 @@
-<article class="summary">
+<article class="summary {{ classes }}">
   <header class="summary-header">
     <{{ h or 'h2' }} class="summary-title"><a href="{{ url }}" class="summary-link">{{ title }}</a></{{ h or 'h2' }}>
   </header>
@@ -7,5 +7,8 @@
   </div>
   <footer class="summary-footer">
     <time datetime="{{ date format="Y-m-d" }}" class="summary-date">{{ date format="j F Y" }}</time>
+    {{ if type }}
+    <span class="summary-type">in: <a href="/{{ type }}">{{ type | title }}</a></span>
+    {{ /if }}
   </footer>
 </article>

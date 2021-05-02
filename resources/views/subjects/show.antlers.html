@@ -1,0 +1,34 @@
+<h1 class="space--margin-bottom-l h2">Content tagged: {{ title }}</h1>
+<h2 class="space--margin-bottom-m h3">Work</h2>
+{{ collection:work sort="date:desc" :taxonomy:subjects="slug" as="items" }}
+{{ if no_results }}
+<div class="prose conatin-line-length space--margin-bottom-xxl">
+  <p>There are no work items tagged {{ title }}</p>
+</div>
+{{ else }}
+<ul class="list list--grid space--margin-bottom-xxl">
+  {{ items }} 
+  <li class="list-item">
+    {{ partial:card }}
+  </li>
+  {{ /items }}
+</ul>
+{{ /if }}
+{{ /collection:work }}
+
+<h2 class="space--margin-bottom-m h3">Articles</h2>
+{{ collection:articles sort="date:desc" :taxonomy:subjects="slug" as="items" }}
+{{ if no_results }}
+<div class="prose conatin-line-length space--margin-bottom-xxl">
+  <p>There are no articles tagged {{ title }}</p>
+</div>
+{{ else }}
+<ul class="list">
+  {{ items }}
+  <li class="list-item">
+    {{ partial:summary }}
+  </li>
+  {{ /items }}
+</ul>
+{{ /if }}
+{{ /collection:articles }}

@@ -4,6 +4,7 @@ layout: layout
 mount: f719c7e5-53b4-4de8-b0b7-4f035516d51d
 taxonomies:
   - tags
+  - subjects
 revisions: false
 route: '/work/{slug}'
 date: true

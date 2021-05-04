@@ -13,3 +13,4 @@ preferences:
       columns:
         - title
         - date
+      after_save: continue_editing

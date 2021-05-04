@@ -1,32 +1,5 @@
-//grids inspired by tailwind grid classes: https://tailwindcss.com/docs/grid-column
-
-//build grid item classes
-#grid {
-  .span(@prefix: ~'', @counter: 1) when (@counter <= @grid-limit) {
-      .@{prefix}col-span-@{counter} {
-          grid-column: span @counter / span @counter;
-      }
-      #grid > .span(@prefix, @counter + 1);
-  }
-  .start(@prefix: ~'', @counter: 1) when (@counter <= @grid-limit) {
-      .@{prefix}col-start-@{counter} {
-          grid-column-start: @counter;
-      }
-      #grid > .start(@prefix, @counter + 1);
-  }
-
-  .align(@prefix: ~'') {
-      .@{prefix}align-start {
-          justify-self: start;
-      }
-      .@{prefix}align-end {
-          justify-self: end;
-      }
-      .@{prefix}align-center {
-          justify-self: center;
-      }  
-  }
-
+.grid-columns(@fitorfill:fill) {
+  grid-template-columns: repeat(~'auto-@{fitorfill}', minmax(unit((270/@base),rem), 1fr));
 }
 
 .list {
@@ -45,9 +18,14 @@
 
 
 @media @bp[min] {
+
   .list--grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(unit((270/@base),rem), 1fr));
+    .grid-columns;
+  }
+  .list--grid-gallery {
+    display: grid;
+    .grid-columns(fit);
   }
   .list--grid .list-item {
     display: flex;
@@ -55,50 +33,4 @@
       flex: 1;
     }
   }
-}
-
-.grid {
-
-  display: grid;
-  grid-auto-flow: row;
-  column-gap: var(--space-m);
-  
-  &--space-all {
-    row-gap: var(--space-m); 
-  }
-      
-  grid-template-columns: repeat(@grid-limit, 1fr);
-      
-  //default grid occupancy for items without class
-  >* {
-      grid-column: 1 / -1;
-  }
-
-  //create [prefix]-col-span-[1-x] classes:
-  #grid > .span();
-
-  //create [prefix]-col-start-[1-x] classes:
-  #grid > .start();
-
-  //align classes
-  #grid > .align();
-
-}
-
-@media @bp[min] {
-  #grid > .span(min-);
-  #grid > .start(min-);
-  #grid > .align(min-);
-}
-
-@media @bp[mid] {
-  #grid > .span(mid-);
-  #grid > .start(mid-);
-  #grid > .align(mid-);
-}
-
-@media @bp[max] {
-  #grid > .span(max-);
-  #grid > .start(max-);
-  #grid > .align(max-);
 }

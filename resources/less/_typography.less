@@ -16,12 +16,16 @@
         }
         #type > .make-typescale-down(@counter + 1);  
     }
-    .sizes(@min, @max) {
-        font-size: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
-    }
+
+    //translate between any steps within the system:
     .steps(@minstep, @maxstep) {
         @min: round(pow(@type-min-scale, @minstep) * @type-min-size, 2);
         @max: round(pow(@type-max-scale, @maxstep) * @type-max-size, 2);
+        font-size: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
+    }
+
+    //is this useful? It doesn't respect any scale:
+    .sizes(@min, @max) {
         font-size: calc((unit((@min/@base), rem)) + (@max - @min) *var(--fluid-bp));
     }
 }
@@ -220,9 +224,6 @@ hr {
         >h2,>h3,>h4,>h5,>h6,
         blockquote:not(.quote) {
             #container.flow;
-        }
-        pre {
-            #container.indent;
         }
     }
 

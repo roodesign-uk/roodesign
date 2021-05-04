@@ -33,12 +33,12 @@ sections:
           validate:
             - required
       -
-        handle: tags
+        handle: subjects
         field:
           type: terms
           taxonomies:
-            - tags
-          display: Tags
+            - subjects
+          display: Subjects
           mode: select
   SEO:
     display: SEO

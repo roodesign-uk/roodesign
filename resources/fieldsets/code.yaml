@@ -20,7 +20,6 @@ fields:
       options:
         markup: 'XML based (HTML, svg, etc)'
         css: CSS
-        less: 'Less CSS'
         javascript: Javascript
       multiple: false
       max_items: 1

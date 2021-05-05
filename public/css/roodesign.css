@@ -1117,7 +1117,7 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .gallery--stage .gallery-images {
-  padding: var(--space-m);
+  padding: var(--space-s);
   background: #222 url('/css/images/pattern-roo-white-10.svg') top left repeat;
 }
 .gallery--text,
@@ -1385,22 +1385,6 @@ footer {
 }
 .outcomes-footer > * {
   max-width: var(--line-length);
-}
-.button {
-  border: 1px solid;
-  padding: var(--space-m);
-  display: inline-block;
-  color: var(--c-blue);
-  text-decoration: underline;
-  padding: var(--space-xxs);
-  margin: calc(-1 * var(--space-xxs));
-}
-.button:hover {
-  text-decoration-thickness: 3px;
-}
-.button:focus {
-  outline: 2px solid var(--c-blue);
-  text-decoration: none;
 }
 .template-home {
   background-color: var(--c-purple);

@@ -3,9 +3,9 @@ id: home
 title: 'Design for humans'
 template: home
 updated_by: 1a730506-93d6-4d2b-a772-38062b802324
-updated_at: 1620072818
+updated_at: 1620211900
 introduction: 'Roodesign is a small human-centred design agency run by me, Jon Roobottom. With over 20 years of experience in solving problems, I can help with your service or product.'
-cover: opengraph/roodesign-ogimage-default.png
+cover: opengraph/roodesign-og.png
 seo:
   title: Homepage
 ---

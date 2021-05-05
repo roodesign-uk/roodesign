@@ -1,1 +1,4 @@
 title: Subjects
+inject:
+  seo:
+    description: '@seo:content'

@@ -1,15 +1,19 @@
 <figure class="screenshots">
+  <div class="screenshots-items">
   {{ screenshots }}
     <div class="screenshots-item screenshots-item--{{ frame }}">
       {{ image }}
         {{ if frame === 'mobile' }}
-          <img src="{{ glide:url width="400" }}" alt="{{ alt }}"/>
+          <img src="{{ glide:url width="380" }}" alt="{{ alt }}"/>
+        {{ elseif frame === 'tablet' }}
+          <img src="{{ glide:url width="600" }}" alt="{{ alt }}"/>
         {{ else }}
-        <img src="{{ glide:url width="800" }}" alt="{{ alt }}"/>
+          <img src="{{ glide:url width="800" }}" alt="{{ alt }}"/>
         {{ /if }}
       {{ /image }}
     </div>
   {{ /screenshots }}
+  </div>
   <figcaption class="screenshots-caption prose--flow">
     {{ caption }}
   </figcaption>

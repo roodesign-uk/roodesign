@@ -1,11 +1,8 @@
 <header aria-labelledby="page-title">
-  <h1 id="page-title" class="space--margin-bottom-s">{{ title }}</h1>
-  <div class="prose space--margin-bottom-l">
-    <p class="type-lead">{{ introduction }}</p>
-  </div>
+  <h1 id="page-title" class="space--margin-bottom-l contain-indent">{{ title }}</h1>
   <dl class="meta space--margin-bottom-l">
     <div class="meta-item">
-      <dt>Start date</dt>
+      <dt>Date</dt>
       <dd>{{ date format="F Y" }}</dd>
     </div>
     <div class="meta-item">
@@ -13,14 +10,18 @@
       <dd>{{ project_length }}</dd>
     </div>
     <div class="meta-item">
-      <dt>Tags</dt>
-      <dd>{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
+      <dt>Subjects</dt>
+      <dd>{{ subjects }}<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /subjects }}</dd>
     </div>
   </dl> 
+  <div class="prose prose--flow space--margin-bottom-l">
+    <p class="type-lead">{{ introduction }}</p>
+  </div>
+  
 </header>
 <section class="space--margin-top--xxl prose prose--flow">
   {{ sections }}
-  <h2 id="{{ title | slugify }}--title" class="type-section-title">{{ title }}</h2>
+  {{ if title }}<h2 id="{{ title | slugify }}--title" class="type-section-title">{{ title }}</h2>{{ /if }}
   {{ partial:content }}
 {{ /sections }}
 </section>

@@ -25,11 +25,6 @@ fields:
           fields:
             -
               import: code
-        screenshots:
-          display: Screenshots
-          fields:
-            -
-              import: screenshots
       buttons:
         - bold
         - italic
@@ -45,6 +40,8 @@ fields:
         - h4
         - h3
         - h2
+        - underline
+        - superscript
       save_html: false
       toolbar_mode: fixed
       link_noopener: false

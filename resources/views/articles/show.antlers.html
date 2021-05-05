@@ -1,8 +1,5 @@
 <header aria-labelledby="page-title">
-  <h1 id="page-title" class="space--margin-bottom-s contain-indent">{{ title }}</h1>
-  <div class="prose space--margin-bottom-l prose--flow">
-    <p class="type-lead">{{ introduction }}</p>
-  </div>
+  <h1 id="page-title" class="space--margin-bottom-l contain-indent">{{ title }}</h1>
   <dl class="meta space--margin-bottom-l">
     <div class="meta-item">
       <dt>Date</dt>
@@ -11,10 +8,13 @@
     {{ if subjects }}
     <div class="meta-item">
       <dt>Subjects</dt>
-      <dd>{{ subjects }}#<a href="/subjects/{{ slug }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /subjects }}</dd>
+      <dd>{{ subjects }}<a href="/subjects/{{ slug }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /subjects }}</dd>
     </div>
     {{ /if }}
   </dl>
+  <div class="prose space--margin-bottom-l prose--flow">
+    <p class="type-lead">{{ introduction }}</p>
+  </div>
 </header>
 <section class="prose prose--flow space--margin-bottom-xxl">
   {{ partial:content }}

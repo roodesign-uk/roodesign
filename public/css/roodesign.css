@@ -314,7 +314,7 @@ hr {
   font-size: var(--step-1);
 }
 .type-mega {
-  font-size: calc(3.1725rem + (187.24 - 50.76) * var(--fluid-bp));
+  font-size: calc(3.806875rem + (187.24 - 60.91) * var(--fluid-bp));
   line-height: var(--line-height--supertight);
 }
 .type-subtitle {
@@ -1009,10 +1009,12 @@ footer {
 .navigation__logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .navigation__logo-text {
   margin-left: var(--space-xs);
   font-family: 'Bely Display', serif;
+  font-size: calc(1.275rem + (30.24 - 20.4) * var(--fluid-bp));
 }
 .navigation .active {
   font-weight: bold;
@@ -1032,6 +1034,9 @@ footer {
 }
 .navigation--reverse a:focus {
   outline: 2px solid white;
+  text-decoration: none;
+}
+.navigation--reverse .navigation__logo {
   text-decoration: none;
 }
 @media only screen and (min-width: 520px) {

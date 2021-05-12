@@ -34,9 +34,9 @@
 
 #type {
     .style() {
-        .link(@color: var(--c-blue), @focus: var(--c-blue)) {
+        .link(@color: var(--c-blue), @focus: var(--c-blue), @underline: underline) {
             color: @color;
-            text-decoration: underline;
+            text-decoration: @underline;
             padding: var(--space-xxs);
             margin: calc(-1 * var(--space-xxs));
             &:hover {
@@ -111,7 +111,7 @@ h1, h2, h3, h4 {
 
 h1, .h1 {
     #type.family.serif;
-    #type > .steps(5, 9);
+    #type.steps(5, 9);
     font-weight: normal;
 }
 
@@ -163,7 +163,7 @@ hr {
         font-size: var(--step-1);
     }
     &-mega {
-        #type.steps(6, 12);
+        #type.steps(7, 12);
         line-height: var(--line-height--supertight);
     }
     &-subtitle {

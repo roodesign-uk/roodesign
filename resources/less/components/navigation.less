@@ -19,10 +19,12 @@
     &__logo {
         display: flex;
         align-items: center;
+        text-decoration: none;
 
         &-text {
             margin-left: var(--space-xs);
             #type.family.serif;
+            #type.steps(1,2);
         }
     }
 
@@ -39,6 +41,10 @@
     //reverse
     &--reverse a {
         #type.style.link(white,white);
+    }
+
+    &--reverse &__logo {
+        text-decoration: none;
     }
 
 }

@@ -1,4 +1,4 @@
-title: Pages
+title: Page
 sections:
   main:
     display: Main
@@ -11,12 +11,9 @@ sections:
           validate:
             - required
       -
-        handle: content
-        field:
-          type: markdown
-          localizable: true
-      -
         import: seo
+      -
+        import: content
   sidebar:
     display: Sidebar
     fields:

@@ -11,15 +11,15 @@
         margin-bottom: var(--space-xxs);
     }
 
-    a {
-        #type.style.link(black, var(--c-grey-light));
+    &__items a {
+        #type.style.link(black, var(--c-purple));
         padding: var(--space-xxs);
     }
 
     &__logo {
         display: flex;
         align-items: center;
-        text-decoration: none;
+        #type.style.link(black, var(--c-purple), none);
 
         &-text {
             margin-left: var(--space-xs);

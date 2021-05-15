@@ -40,6 +40,7 @@
             padding: var(--space-xxs);
             margin: calc(-1 * var(--space-xxs));
             &:hover {
+                text-decoration: underline;
                 text-decoration-thickness: 3px;
             }
             &:focus {
@@ -53,7 +54,8 @@
             font-family: 'Debut Sans', sans-serif;
         }
         .serif() {
-            font-family: 'Bely Display', serif;
+            //font-family: 'Bely Display', serif;
+            font-family: 'Tiempos Headline', serif;
         }
         .mono() {
             font-family: 'DM Mono', monospace;
@@ -88,8 +90,8 @@
     font-style: italic;
 }
 @font-face{
-    font-family: 'Bely Display'; 
-    src: url('@{path-fonts}BelyDisplay-Regular.woff2') format('woff2');
+    font-family: 'Tiempos Headline'; 
+    src: url('@{path-fonts}tiempos-headline-web-black.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -171,6 +173,9 @@ hr {
         color: var(--c-grey-light);
         #type.family.sans;
         display: block;
+    }
+    &-center {
+        text-align: center;
     }
 }
 

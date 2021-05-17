@@ -395,7 +395,7 @@ hr {
   .prose--flow > h5,
   .prose--flow > h6,
   .prose--flow blockquote:not(.quote) {
-    margin-left: calc(0rem + (84 - 0) * var(--fluid-bp));
+    margin-left: calc(0rem + (42 - 0) * var(--fluid-bp));
   }
 }
 .prose--reverse {
@@ -438,7 +438,7 @@ hr {
 }
 @media only screen and (min-width: 980px) {
   .contain-flow {
-    margin-left: calc(0rem + (84 - 0) * var(--fluid-bp));
+    margin-left: calc(0rem + (42 - 0) * var(--fluid-bp));
   }
 }
 .contain-line-length {
@@ -446,7 +446,7 @@ hr {
 }
 @media only screen and (min-width: 980px) {
   .contain-indent {
-    margin-left: calc(0rem + (84 - 0) * var(--fluid-bp));
+    margin-left: calc(0rem + (42 - 0) * var(--fluid-bp));
   }
 }
 footer {
@@ -1156,7 +1156,7 @@ footer {
 @media only screen and (min-width: 980px) {
   .gallery--text,
   .gallery--full .gallery-caption {
-    margin-left: calc(0rem + (84 - 0) * var(--fluid-bp));
+    margin-left: calc(0rem + (42 - 0) * var(--fluid-bp));
   }
 }
 @media only screen and (min-width: 750px) {
@@ -1189,7 +1189,7 @@ footer {
 }
 @media only screen and (min-width: 980px) {
   .quote-cite {
-    margin-left: calc(0rem + (84 - 0) * var(--fluid-bp));
+    margin-left: calc(0rem + (42 - 0) * var(--fluid-bp));
   }
 }
 .card {
@@ -1412,7 +1412,6 @@ footer {
 .outcomes-footer {
   background-color: var(--c-grey-x-light);
   padding: var(--space-xs) var(--space-s);
-  margin: calc(-1 * var(--space-s));
   margin-top: var(--space-m);
   font-size: var(--step--1);
 }

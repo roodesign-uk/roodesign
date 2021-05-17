@@ -1,9 +1,9 @@
 ---
 id: 37137148-6519-496e-8ddb-c873786e3778
 title: Services
-introduction: 'I work with organisations big and small.'
+introduction: 'I work with organisations big and small on digital products and services.'
 updated_by: 1a730506-93d6-4d2b-a772-38062b802324
-updated_at: 1621114446
+updated_at: 1621243077
 content:
   -
     type: heading
@@ -18,7 +18,7 @@ content:
     content:
       -
         type: text
-        text: "I'm excited about creating compelling services and products.\_"
+        text: 'I work with cross-discipline agile teams on UCD projects.'
   -
     type: bullet_list
     content:
@@ -95,7 +95,7 @@ content:
     content:
       -
         type: text
-        text: "I love working with teams of people so they can do their best work.\_"
+        text: 'I structure teams of people so they can do their best work.'
   -
     type: bullet_list
     content:
@@ -139,13 +139,13 @@ content:
     content:
       -
         type: text
-        text: 'Design for future business'
+        text: 'Creativity for businesses'
   -
     type: paragraph
     content:
       -
         type: text
-        text: 'I use the powerful tools of human-centred design and deliberate creativity to help you uncover the hidden potential in your business.'
+        text: 'I help SMEs be deliberately creative; together, we''ll uncover the hidden potential in your business.'
   -
     type: bullet_list
     content:

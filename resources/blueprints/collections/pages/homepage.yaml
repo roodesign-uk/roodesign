@@ -1,4 +1,4 @@
-title: Page
+title: Homepage
 sections:
   main:
     display: Main
@@ -13,19 +13,7 @@ sections:
       -
         import: seo
       -
-        handle: sections
-        field:
-          collapse: false
-          sets:
-            section:
-              display: Section
-              fields:
-                -
-                  import: content
-          display: Sections
-          type: replicator
-          icon: replicator
-          listable: hidden
+        import: content
   sidebar:
     display: Sidebar
     fields:

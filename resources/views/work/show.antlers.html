@@ -19,9 +19,9 @@
   </div>
   
 </header>
-<section class="space--margin-top--xxl prose prose--flow">
-  {{ sections }}
-  {{ if title }}<h2 id="{{ title | slugify }}--title" class="type-section-title">{{ title }}</h2>{{ /if }}
+{{ sections }}
+<section class="section space--margin-top-xxl prose prose--flow" {{ if title }}id="{{ title | slugify }}"{{ /if }}>
+  {{ if title }}<h2 class="type-section-title">{{ title }}</h2>{{ /if }}
   {{ partial:content }}
-{{ /sections }}
 </section>
+{{ /sections }}

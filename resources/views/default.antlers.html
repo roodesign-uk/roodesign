@@ -4,6 +4,9 @@
     <p class="type-lead">{{ introduction }}</p>
   </div>
 </header>
-<section class="space--margin-top--xxl prose prose--flow">
+{{ sections }}
+<section class="section space--margin-top-xxl prose prose--flow">
+  {{ if title }}<h2 id="{{ title | slugify }}--title" class="type-section-title">{{ title }}</h2>{{ /if }}
   {{ partial:content }}
 </section>
+{{ /sections }}

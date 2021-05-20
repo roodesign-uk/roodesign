@@ -449,6 +449,11 @@ hr {
     margin-left: calc(0rem + (42 - 0) * var(--fluid-bp));
   }
 }
+.section:after {
+  display: block;
+  content: "";
+  clear: both;
+}
 footer {
   clear: both;
 }

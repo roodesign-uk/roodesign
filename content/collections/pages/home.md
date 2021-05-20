@@ -1,12 +1,11 @@
 ---
 id: home
+blueprint: homepage
 title: 'Design for humans'
 template: home
 updated_by: 1a730506-93d6-4d2b-a772-38062b802324
-updated_at: 1620918956
-introduction: 'Roodesign is a small agency run by me, Jon Roobottom. I''ve worked with the UK government, agencies, and business of all types.'
-cover: opengraph/roodesign-og.png
-blueprint: homepage
+updated_at: 1621544120
+introduction: 'Roodesign is a creative agency run by me, Jon Roobottom. Using human-centred design techniques, I help organisations build great products, manage happy teams and have potent ideas.'
 seo:
   title: Homepage
 content:
@@ -15,7 +14,7 @@ content:
     content:
       -
         type: text
-        text: 'Roodesign is a small agency run by me, Jon Roobottom. Previously, I''ve worked with the UK government, creative agencies, and business of all kinds.'
+        text: 'Roodesign is a creative agency run by me, Jon Roobottom. Using human-centred design techniques, I help organisations build great products, manage happy teams and have potent ideas.'
   -
     type: paragraph
     content:
@@ -25,9 +24,9 @@ content:
           -
             type: link
             attrs:
-              href: 'statamic://entry::7d3c06f2-9a80-4beb-bb71-1984f88f93a0'
+              href: 'statamic://entry::8c41371f-bdd6-4d65-9688-dd536e06f386'
               rel: null
               target: null
               title: null
-        text: 'What is design for humans?'
+        text: 'Here''s how I can help you.'
 ---

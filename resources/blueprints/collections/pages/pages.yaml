@@ -21,6 +21,15 @@ sections:
               display: Section
               fields:
                 -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Title
+                    type: text
+                    icon: text
+                    listable: hidden
+                -
                   import: content
           display: Sections
           type: replicator

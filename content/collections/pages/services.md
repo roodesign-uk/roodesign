@@ -5,8 +5,16 @@ title: Services
 introduction: 'I help organisations build great products, manage happy teams and have potent ideas.'
 sections:
   -
-    title: '1. User-Centred Design for government and agencies'
+    title: 'Human-Centred Design'
     content:
+      -
+        type: set
+        attrs:
+          values:
+            type: images
+            assets:
+              - services/design.png
+            layout: right
       -
         type: paragraph
         content:
@@ -73,8 +81,16 @@ sections:
     type: section
     enabled: true
   -
-    title: '2. People and process consultancy'
+    title: 'People and process consultancy'
     content:
+      -
+        type: set
+        attrs:
+          values:
+            type: images
+            assets:
+              - services/team.png
+            layout: right
       -
         type: paragraph
         content:
@@ -123,7 +139,7 @@ sections:
     type: section
     enabled: true
   -
-    title: '3. Creativity for businesses'
+    title: 'Creativity for businesses'
     content:
       -
         type: paragraph
@@ -164,5 +180,5 @@ sections:
     type: section
     enabled: true
 updated_by: 1a730506-93d6-4d2b-a772-38062b802324
-updated_at: 1621542333
+updated_at: 1622321355
 ---

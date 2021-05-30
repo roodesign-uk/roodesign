@@ -1167,12 +1167,12 @@ footer {
 @media only screen and (min-width: 750px) {
   .gallery--right {
     float: right;
-    max-width: 20rem;
+    max-width: 25rem;
     margin-left: var(--space-m);
   }
   .gallery--left {
     float: left;
-    max-width: 20rem;
+    max-width: 25rem;
     margin-right: var(--space-m);
   }
 }

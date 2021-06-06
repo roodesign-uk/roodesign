@@ -14,3 +14,5 @@ preferences:
         - title
         - date
       after_save: continue_editing
+    pages:
+      after_save: continue_editing

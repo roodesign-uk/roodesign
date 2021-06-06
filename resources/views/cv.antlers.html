@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}" data-scroll="0">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jon Roobottom’s CV</title>
+        <link rel="stylesheet" href="{{ mix src='css/roodesign.css' }}">
+        {{ seo_pro:meta }}
+    </head>
+    <body class="">
+        <header class="container">
+          <span class="caption"><a href="{{ url }}">{{ title | smartypants }}</a></span>
+          <h1>{{ summary | smartypants }}</h1>
+          <div class="prose prose--flow">
+            {{ introduction }}
+          </div>
+        </header>
+        <main class="container">
+            {{ sections }}
+              <h2>{{ title }}</h2>
+              <div class="prose prose--flow timeline">
+                {{ content }}
+              </div>
+            {{ /sections }}
+        </main>
+        <footer class="container">
+
+        </footer>
+    </body>
+</html>

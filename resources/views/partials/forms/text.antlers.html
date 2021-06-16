@@ -1,0 +1,7 @@
+<div class="form-group">
+  <label class="form-label" for="{{ handle }}">{{ display | smartypants }}</label>
+  {{ if instructions }}
+  <div class="form-hint" id="{{ handle }}-hint">{{ instructions | smartypants }}</div>
+  {{ /if }}
+  <input type="text" name="{{ handle }}" id="{{ handle }}" class="form-input" {{ if instructions }}aria-describedby="{{ handle }}-hint"{{ /if }}>
+</div>

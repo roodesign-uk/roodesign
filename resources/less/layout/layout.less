@@ -6,7 +6,7 @@
   list-style: none;
   gap: var(--space-m);
 
-  &:not(.list--grid) &-item {
+  &:not(.list--grid):not(.list--grid-gallery) &-item {
     padding-bottom: var(--space-m);
     margin-bottom: var(--space-m);
     &:not(:last-of-type) {
@@ -27,7 +27,9 @@
     display: grid;
     .grid-columns(fit);
   }
-  .list--grid .list-item {
+  .list--grid .list-item,
+  .list--grid-gallery .list-item {
+    list-style: none;
     display: flex;
     >* {
       flex: 1;

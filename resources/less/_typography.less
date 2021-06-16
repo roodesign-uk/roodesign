@@ -181,11 +181,12 @@ hr {
 
 //prose
 .prose {
-    >*+*{
+    >*+*:not(.gallery--right):not(.gallery--left) {
         margin-top: var(--space-s);
     }
 
-    >*+h2 {
+    >*+h2,
+    >figure:not(.gallery--right):not(.gallery--left)+* {
         margin-top: var(--space-xxl);
     }
 

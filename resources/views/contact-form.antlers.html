@@ -10,3 +10,14 @@
   {{ partial:content }}
 </section>
 {{ /sections }}
+<section class="section space--margin-top-xxl prose prose--flow">
+  {{ form:contact class="form contain-flow" }}
+
+    {{ fields }}
+      {{ partial src="forms/{type}" }}
+    {{ /fields }}
+
+    <button class="form-button">Send</button>
+
+  {{ /form:contact }}
+</section>

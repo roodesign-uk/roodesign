@@ -3,32 +3,34 @@ sections:
     display: Main
     fields:
       -
-        handle: your_name
+        handle: name
         field:
           input_type: text
           antlers: false
-          display: 'Your name'
+          display: 'What''s your name?'
           type: text
           icon: text
           listable: hidden
           validate:
             - required
+          instructions: 'So I know what to call you!'
       -
         handle: email
         field:
           input_type: text
           antlers: false
-          display: 'Your email'
+          display: 'What''s your email address?'
           type: text
           icon: text
           listable: hidden
           validate:
             - required
       -
-        handle: message
+        handle: content
         field:
           antlers: false
-          display: Message
+          display: 'How can I help?'
           type: textarea
           icon: textarea
           listable: hidden
+          instructions: 'Tell me about your project, budget and timescales.'

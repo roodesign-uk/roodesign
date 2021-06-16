@@ -326,10 +326,11 @@ hr {
 .type-center {
   text-align: center;
 }
-.prose > * + * {
+.prose > * + *:not(.gallery--right):not(.gallery--left) {
   margin-top: var(--space-s);
 }
-.prose > * + h2 {
+.prose > * + h2,
+.prose > figure:not(.gallery--right):not(.gallery--left) + * {
   margin-top: var(--space-xxl);
 }
 .prose > * + h3,
@@ -969,11 +970,11 @@ footer {
   list-style: none;
   gap: var(--space-m);
 }
-.list:not(.list--grid) .list-item {
+.list:not(.list--grid):not(.list--grid-gallery) .list-item {
   padding-bottom: var(--space-m);
   margin-bottom: var(--space-m);
 }
-.list:not(.list--grid) .list-item:not(:last-of-type) {
+.list:not(.list--grid):not(.list--grid-gallery) .list-item:not(:last-of-type) {
   border-bottom: 1px solid var(--c-grey-x-light);
 }
 @media only screen and (min-width: 320px) {
@@ -985,10 +986,13 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
   }
-  .list--grid .list-item {
+  .list--grid .list-item,
+  .list--grid-gallery .list-item {
+    list-style: none;
     display: flex;
   }
-  .list--grid .list-item > * {
+  .list--grid .list-item > *,
+  .list--grid-gallery .list-item > * {
     flex: 1;
   }
 }
@@ -1152,7 +1156,7 @@ footer {
 }
 .gallery--stage .gallery-images {
   padding: var(--space-s);
-  background: #222 url('/css/images/pattern-roo-white-10.svg') top left repeat;
+  background: #222;
 }
 .gallery--text,
 .gallery--full .gallery-caption {
@@ -1169,11 +1173,13 @@ footer {
     float: right;
     max-width: 25rem;
     margin-left: var(--space-m);
+    clear: both;
   }
   .gallery--left {
     float: left;
     max-width: 25rem;
     margin-right: var(--space-m);
+    clear: both;
   }
 }
 .quote-content {
@@ -1422,6 +1428,27 @@ footer {
 }
 .outcomes-footer > * {
   max-width: var(--line-length);
+}
+.form-group {
+  margin-bottom: var(--space-m);
+}
+.form-label,
+.form-hint,
+.form-input {
+  display: block;
+}
+.form-hint {
+  font-size: var(--step--1);
+  color: var(--c-grey-dark);
+}
+.form-input {
+  font-family: 'Debut Sans', sans-serif;
+  font-size: var(--step-0);
+  border: 2px solid var(--c-grey-x-dark);
+  box-sizing: border-box;
+  padding: var(--space-xxs);
+  width: 100%;
+  margin-top: var(--space-xs);
 }
 .template-home {
   background-color: var(--c-purple);

@@ -1,10 +1,14 @@
 {{ content }}
   {{# spacing for components in this context #}}
-  {{ variable:classes value=" " }}
-  {{ if type === 'images' && (layout != 'right' || layout != 'left') }}
-    {{ variable:classes value="space--margin-top-m" }}
+  {{ if type === 'image' }}
+    {{ if layout === 'left' || layout === 'right' }}
+      {{ partial src="sets/{type}" }}
+    {{ else }}
+      {{ partial src="sets/{type}" classes="space--margin-top-m" }}
+    {{ /if }}
   {{ elseif (type === 'quote') }}
-    {{ variable:classes value="space--margin-top-xl" }}
-  {{ /if }}
-    {{ partial src="sets/{type}" classes="{variable:classes}" }}
+    {{ partial src="sets/{type}" classes="space--margin-top-xl" }}
+  {{ else }}
+    {{ partial src="sets/{type}" }}
+  {{ /if }}  
 {{ /content }}

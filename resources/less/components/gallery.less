@@ -30,7 +30,7 @@
 
   &--stage &-images {
     padding: var(--space-s);
-    background: ~"#222 url('@{path-images}pattern-roo-white-10.svg') top left repeat";
+    background: #222; //url('@{path-images}pattern-roo-white-10.svg') top left repeat";
   }
 
   &--text,
@@ -47,11 +47,13 @@
       float: right;
       max-width: 25rem;
       margin-left: var(--space-m);
+      clear: both;
     }
     &--left {
       float: left;
       max-width: 25rem;
       margin-right: var(--space-m);
+      clear: both;
     }
   }
 }

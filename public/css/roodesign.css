@@ -326,16 +326,21 @@ hr {
 .type-center {
   text-align: center;
 }
-.prose > * + *:not(.gallery--right):not(.gallery--left) {
+.prose > * + * {
   margin-top: var(--space-s);
 }
 .prose > * + h2,
-.prose > figure:not(.gallery--right):not(.gallery--left) + * {
+.prose .quote {
   margin-top: var(--space-xxl);
 }
 .prose > * + h3,
-.prose > * + h4 {
+.prose > * + h4,
+.prose .gallery {
   margin-top: var(--space-l);
+}
+.prose .gallery--left,
+.prose .gallery--right {
+  margin-top: var(--space-s);
 }
 .prose > h3 + p,
 .prose > h4 + p {
@@ -415,6 +420,13 @@ hr {
 .prose--reverse a:focus {
   outline: 2px solid white;
   text-decoration: none;
+}
+@media only screen and (min-width: 750px) {
+  .prose .gallery--left,
+  .prose .gallery--right {
+    margin-top: 0;
+    margin-bottom: var(--space-m);
+  }
 }
 .visually-hidden {
   clip: rect(0 0 0 0);

@@ -3,5 +3,5 @@
   {{ if instructions }}
   <div class="form-hint" id="{{ handle }}-hint">{{ instructions | smartypants }}</div>
   {{ /if }}
-  <textarea class="form-input" name="{{ handle }}" id="{{ handle }}" rows="5" {{ if instructions }}aria-describedby="{{ handle }}-hint"{{ /if }}></textarea>
+  <textarea class="form-input" name="{{ handle }}" id="{{ handle }}" rows="5" {{ if instructions }}aria-describedby="{{ handle }}-hint"{{ /if }}>{{ old }}</textarea>
 </div>

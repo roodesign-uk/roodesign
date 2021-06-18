@@ -25,6 +25,7 @@ sections:
           listable: hidden
           validate:
             - required
+          instructions: 'I''ll use your email just to contact you about your project'
       -
         handle: content
         field:

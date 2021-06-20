@@ -8,14 +8,6 @@ sections:
     title: 'Human-Centred Design'
     content:
       -
-        type: set
-        attrs:
-          values:
-            type: images
-            assets:
-              - services/design.png
-            layout: right
-      -
         type: paragraph
         content:
           -
@@ -78,19 +70,25 @@ sections:
                   -
                     type: text
                     text: 'Workshop design and facilitation'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '/contact?came_via=link_hcd'
+                  rel: null
+                  target: null
+                  title: null
+            text: 'Contact me about your design needs'
     type: section
     enabled: true
   -
     title: 'People and process consultancy'
     content:
-      -
-        type: set
-        attrs:
-          values:
-            type: images
-            assets:
-              - services/team.png
-            layout: right
       -
         type: paragraph
         content:
@@ -136,6 +134,20 @@ sections:
                   -
                     type: text
                     text: Mentoring
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '/contact?came_via=link_people'
+                  rel: null
+                  target: null
+                  title: null
+            text: 'Talk to me about the needs of your design team'
     type: section
     enabled: true
   -
@@ -177,8 +189,22 @@ sections:
                   -
                     type: text
                     text: 'Long-term strategy planning'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: '/contact?came_via=link_creativity'
+                  rel: null
+                  target: null
+                  title: null
+            text: 'Tell me about your business'
     type: section
     enabled: true
 updated_by: 1a730506-93d6-4d2b-a772-38062b802324
-updated_at: 1622321355
+updated_at: 1624219465
 ---

@@ -1,7 +1,7 @@
 <h1 class="space--margin-bottom-l">{{ title }}</h1>
 {{ collection from="articles|work" :taxonomy:subjects="slug" as="items" sort="date:desc" }}
 {{ if not no_results }}
-<ul class="list">
+<ul class="list contain-indent">
   {{ items }}
   <li class="list-item">
     {{ partial:summary :type="collection" }}

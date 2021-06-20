@@ -1,14 +1,14 @@
 {{ form:contact }}
 {{ if success }}
   <header aria-labelledby="page-title">
-    <h1 id="page-title" class="space--margin-bottom-l contain-indent">Thank you!</h1>
+    <h1 id="page-title" class="space--margin-bottom-l">Thank you!</h1>
     <div class="prose prose--flow space--margin-bottom-l">
       <p class="type-lead">I’ll be in touch as soon as humanly possible.</p>
     </div>
   </header>
 {{ else }}
   <header aria-labelledby="page-title">
-    <h1 id="page-title" class="space--margin-bottom-l contain-indent">{{ title }}</h1>
+    <h1 id="page-title" class="space--margin-bottom-l">{{ title }}</h1>
     <div class="prose prose--flow space--margin-bottom-l">
       <p class="type-lead">{{ introduction }}</p>
     </div>
@@ -39,7 +39,7 @@
         {{ partial src="forms/{type}" }}
       {{ /fields }}
 
-      <input type="text" name="pot-o-gold" class="visually-hidden" />
+      <input type="text" name="pot-o-gold" class="visually-hidden" tabindex="-1" />
 
       <button class="form-button">Send</button>
 

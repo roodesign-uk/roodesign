@@ -13,6 +13,19 @@ sections:
       -
         import: seo
       -
+        handle: hero
+        field:
+          mode: grid
+          container: assets
+          folder: illustrations
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: Hero
+          type: assets
+          icon: assets
+          listable: hidden
+      -
         import: content
   sidebar:
     display: Sidebar

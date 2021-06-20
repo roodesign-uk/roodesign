@@ -16,3 +16,11 @@ preferences:
       after_save: continue_editing
     pages:
       after_save: continue_editing
+  forms:
+    contact:
+      columns:
+        - name
+        - email
+        - came_via
+        - datestamp
+        - content

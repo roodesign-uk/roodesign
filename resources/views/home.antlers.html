@@ -1,6 +1,13 @@
-<h1 class="type-mega">{{ title }}</h1>
+<div class="showcase">
+  <h1 class="type-mega showcase-title">{{ title }}</h1>
+  <img src="{{ hero }}" class="showcase-image" aria-hidden="true" role="presentation" alt="An illustration of a thinking person, their brain fizzing with ideas."/>
+  <div class="showcase-content prose prose--reverse prose--flow space--margin-top-s">
+    {{ partial:content }}
+  </div>
+</div>
+
 <div class="prose type-lead prose--flow prose--reverse space--margin-top-s">
-  {{ partial:content }}
+  
 </div>
 <h2 class="space--margin-top-xxl">Featured work</h2>
 <ul class="list list--grid space--margin-top-m">

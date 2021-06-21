@@ -1,0 +1,44 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: master_image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Master image'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
+        handle: og_width
+        field:
+          display: 'OG width'
+          type: integer
+          icon: integer
+          listable: hidden
+      -
+        handle: og_height
+        field:
+          display: 'OG height'
+          type: integer
+          icon: integer
+          listable: hidden
+      -
+        handle: twitter_width
+        field:
+          display: 'Twitter width'
+          type: integer
+          icon: integer
+          listable: hidden
+      -
+        handle: twitter_height
+        field:
+          display: 'Twitter height'
+          type: integer
+          icon: integer
+          listable: hidden

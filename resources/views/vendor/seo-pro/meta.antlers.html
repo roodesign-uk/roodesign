@@ -49,14 +49,14 @@
 {{ /if }}
 
 {{# custom image generation #}}
-{{ glide :src="open_graph:master_image" orient="{ og:rotate }" crop="{ open_graph:og_width }, { open_graph:og_height }, { og:xy }, { og:xy }" bg="{ og:colour }" format="png" }} 
+{{ glide :src="open_graph:master_image" orient="{ og:rotate }" crop="{ open_graph:og_width }, { open_graph:og_height }, { og:xy }, { og:xy }" bg="{ og:colour }" format="png" absolute="true" }} 
 <meta property="og:image" content="{{ url }}" />
 <meta property="og:image:width" content="{{ width }}" />
 <meta property="og:image:height" content="{{ height }}" />
 <meta property="og:image:alt" content="A randomly generated pattern" />
 {{ /glide }}
 
-{{ glide :src="open_graph:master_image" orient="{ og:rotate }" crop="{ open_graph:twitter_width }, { open_graph:twitter_height }, { og:xy }, { og:xy }" bg="{ og:colour }" format="png" }} 
+{{ glide :src="open_graph:master_image" orient="{ og:rotate }" crop="{ open_graph:twitter_width }, { open_graph:twitter_height }, { og:xy }, { og:xy }" bg="{ og:colour }" format="png" absolute="true" }} 
 <meta name="twitter:image" content="{{ url }}" />
 <meta property="twitter:image:alt" content="A randomly generated pattern" />
 {{ /glide }}

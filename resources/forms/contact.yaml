@@ -1,2 +1,10 @@
 title: Contact
 honeypot: pot-o-gold
+email:
+  -
+    to: '{{ email }}'
+    subject: 'Thanks for contacting Roodesign!'
+    html: contact-form-email
+  -
+    to: roo@roodesign.co.uk
+    subject: 'New website contact'

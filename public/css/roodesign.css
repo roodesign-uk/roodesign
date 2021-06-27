@@ -337,7 +337,8 @@ hr {
 }
 .prose > * + h3,
 .prose > * + h4,
-.prose .gallery {
+.prose .gallery,
+.prose .gallery + p {
   margin-top: var(--space-l);
 }
 .prose .gallery--left,

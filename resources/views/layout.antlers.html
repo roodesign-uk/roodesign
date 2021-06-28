@@ -7,7 +7,9 @@
         <title>{{ if errors }}Error: {{ /if }}{{ title ?? site:name }} -  Roodesign</title>
         <link rel="stylesheet" href="{{ mix src='css/roodesign.css' }}">
         {{ seo_pro:meta }}
-        <script src="https://llama.roodesign.co.uk/script.js" data-site="OOYQAAZS" defer></script>
+        {{ if environment === 'production' }}
+            <script src="https://llama.roodesign.co.uk/script.js" data-site="OOYQAAZS" defer></script>
+        {{ /if }}
     </head>
     <body class="no-js template-{{ template | slugify }}">
         <header class="container">

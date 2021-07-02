@@ -8,5 +8,5 @@
     <span class="visually-hidden">Error:</span> {{ error }}
   </span>
   {{ /if }}
-  <input type="text" name="{{ handle }}" id="{{ handle }}" class="form-input {{ if error }}form-input--error{{ /if }}" {{ if instructions }}aria-describedby="{{ handle }}-hint"{{ /if }} value="{{ old }}">
+  <input type="text" name="{{ handle }}" id="{{ handle }}" class="form-input {{ if error }}form-input--error{{ /if }}" {{ if instructions }}aria-describedby="{{ handle }}-hint"{{ /if }} value="{{ old }}" {{ if required }}required{{ /if }}>
 </div>

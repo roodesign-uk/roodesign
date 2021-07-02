@@ -19,6 +19,12 @@
 <section class="prose prose--flow space--margin-bottom-xxl">
   {{ partial:content }}
 </section>
+{{ section:breakout_content }}
+<h2>{{ newsletter_signup:title }}</h2>
+{{ newsletter_signup:introduction }}
+{{ partial:newsletter classes="form--reverse contain-flow" }}
+{{ /section:breakout_content }}
+{{ partial:breakout }}
 <hr class="space--margin-bottom-m">
 <h2 class="space--margin-bottom-m">You may also like</h2>
 <ul class="list list--grid">

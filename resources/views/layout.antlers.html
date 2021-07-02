@@ -31,18 +31,34 @@
                 <p>&copy; Roodesign Limited</p>
                 <p>Registered in England and Wales with company number 11770882</p>
             </div>
-            <span class="footer-title">Explore this site by subject:</span>
-            <ul class="footer-navigation">
-                {{ taxonomy:subjects }}
-                    <li><a href="{{ url }}">{{ title }}</a></li>
-                {{ /taxonomy:subjects }}
-            </ul>
-            <span class="footer-title">Find Roodesign elsewhere on the web:</span>
-            <ul class="footer-navigation">
-                {{ nav:social }}
-                    <li><a href="{{ url }}">{{ title }}</a></li>
-                {{ /nav:social }}
-            </ul>
+
+            <h4 class="footer-title" id="explore-this-site">Explore this site</h4>
+            <nav aria-labelledby="explore-this-site">
+                <ul class="footer-navigation">
+                    {{ nav:footer }}
+                        <li><a href="{{ url }}">{{ title }}</a></li>
+                    {{ /nav:footer }}
+                </ul>
+            </nav>
+
+            <h4 class="footer-title" id="explore-this-site-by-subject">Explore this site by subject</h4>
+            <nav aria-labelledby="explore-this-site-by-subject">
+                <ul class="footer-navigation">
+                    {{ taxonomy:subjects }}
+                        <li><a href="{{ url }}">{{ title }}</a></li>
+                    {{ /taxonomy:subjects }}
+                </ul>
+            </nav>
+
+            <h4 class="footer-title" id="roodesign-elsewhere">Find Roodesign elsewhere on the web</h4>
+            <nav aria-labelledby="roodesign-elsewhere">
+                <ul class="footer-navigation">
+                    {{ nav:social }}
+                        <li><a href="{{ url }}">{{ title }}</a></li>
+                    {{ /nav:social }}
+                </ul>
+            </nav>
+
         </footer>
         {{# <script src="{{ mix src='/js/site.js' }}"></script> #}}
         <script src="/js/prism.js"></script>

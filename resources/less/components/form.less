@@ -56,13 +56,13 @@
   &-button {
     #type.family.sans;
     line-height: 1;
-    font-size: var(--step-1);
+    font-size: var(--step-0);
     background-color: var(--c-purple);
     color: white;
     padding: var(--space-xs) var(--space-s);
     border: none;
     cursor: pointer;
-    box-shadow: inset 0 -3px 0 fade(black,40%);
+    box-shadow: 0 3px 0 var(--c-purple-dark);
 
     &:hover {
       background-color: var(--c-purple-dark);
@@ -74,4 +74,33 @@
     }
 
   }
-}
+
+
+  //reverse styles
+  //labels inherit from prose--reverse
+  &--reverse &-input {
+    border-color: white;
+
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 3px black, inset 0 0 0 3px white;
+    }
+  }
+
+  &--reverse &-button {
+    background-color: white;
+    color: black;
+    box-shadow: 0 3px 0 var(--c-purple-dark);
+
+    &:hover {
+      background-color: lighten(black,95%);
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 3px black;
+    }
+  }
+
+
+} //end

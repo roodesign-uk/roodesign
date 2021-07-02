@@ -46,6 +46,7 @@ sections:
           localizable: true
           validate:
             - required
+            - 'unique_entry_value:{collection},{id},{site}'
       -
         handle: parent
         field:
@@ -55,6 +56,13 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: show_newsletter_signup
+        field:
+          display: 'Show newsletter signup?'
+          type: toggle
+          icon: toggle
+          listable: hidden
   SEO:
     display: SEO
     fields:

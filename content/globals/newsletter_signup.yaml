@@ -1,0 +1,6 @@
+title: 'Newsletter signup'
+data:
+  title: 'Want more?'
+  introduction: 'The **Roodesign newsletter** is the best of the articles directly to your inbox. I''ll send you one email (roughly) every month.'
+  email_label: 'What is your email address?'
+  button_label: 'Sign up'

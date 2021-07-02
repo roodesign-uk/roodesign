@@ -46,6 +46,7 @@ sections:
           localizable: true
           validate:
             - required
+            - 'unique_entry_value:{collection},{id},{site}'
       -
         handle: date
         field:
@@ -89,6 +90,14 @@ sections:
           type: text
           icon: text
           listable: hidden
+      -
+        handle: subjects
+        field:
+          type: terms
+          taxonomies:
+            - subjects
+          display: Subjects
+          mode: select
   SEO:
     display: SEO
     fields:

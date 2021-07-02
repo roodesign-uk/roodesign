@@ -1,0 +1,10 @@
+<header aria-labelledby="page-title">
+  <h1 id="page-title" class="space--margin-bottom-l">{{ title }}</h1>
+</header>
+{{ sections }}
+<section class="section space--margin-top-l prose prose--flow">
+  {{ if title }}<h2 id="{{ title | slugify }}--title" class="type-section-title">{{ title }}</h2>{{ /if }}
+  {{ partial:content }}
+</section>
+{{ /sections }}
+{{ partial:newsletter classes="form--reverse contain-flow space--margin-top-m" }}

@@ -1,0 +1,44 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          input_type: text
+          antlers: false
+          display: Title
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: introduction
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Introduction
+          type: markdown
+          icon: markdown
+          listable: hidden
+      -
+        handle: email_label
+        field:
+          input_type: text
+          antlers: false
+          display: 'Email label'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: button_label
+        field:
+          input_type: text
+          antlers: false
+          display: 'Button label'
+          type: text
+          icon: text
+          listable: hidden

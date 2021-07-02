@@ -1503,13 +1503,13 @@ footer {
 .form-button {
   font-family: 'Debut Sans', sans-serif;
   line-height: 1;
-  font-size: var(--step-1);
+  font-size: var(--step-0);
   background-color: var(--c-purple);
   color: white;
   padding: var(--space-xs) var(--space-s);
   border: none;
   cursor: pointer;
-  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 0 var(--c-purple-dark);
 }
 .form-button:hover {
   background-color: var(--c-purple-dark);
@@ -1518,11 +1518,31 @@ footer {
 .form-button:active {
   box-shadow: 0 0 0 3px var(--c-purple-dark), inset 0 0 0 3px white;
 }
+.form--reverse .form-input {
+  border-color: white;
+}
+.form--reverse .form-input:focus,
+.form--reverse .form-input:active {
+  box-shadow: 0 0 0 3px black, inset 0 0 0 3px white;
+}
+.form--reverse .form-button {
+  background-color: white;
+  color: black;
+  box-shadow: 0 3px 0 var(--c-purple-dark);
+}
+.form--reverse .form-button:hover {
+  background-color: #f2f2f2;
+}
+.form--reverse .form-button:focus,
+.form--reverse .form-button:active {
+  box-shadow: 0 0 0 3px black;
+}
 .showcase-image {
   float: right;
   display: block;
-  max-width: 180px;
+  max-width: 120px;
   margin-top: var(--space-s);
+  margin-right: var(--space-s);
 }
 @media only screen and (min-width: 609px) {
   .showcase {
@@ -1544,11 +1564,29 @@ footer {
     grid-area: content;
   }
 }
+.breakout {
+  background-color: var(--c-pink);
+  background: linear-gradient(120deg, var(--c-purple), var(--c-pink));
+  padding: var(--space-m);
+}
+@media only screen and (min-width: 980px) {
+  .breakout {
+    padding: var(--space-m) 0;
+  }
+}
 .template-home {
   background-color: var(--c-purple);
   background: linear-gradient(-120deg, var(--c-pink), var(--c-purple));
 }
 .template-home,
 .template-home a {
+  color: white;
+}
+.template-newsletter {
+  background-color: var(--c-purple);
+  background: linear-gradient(-120deg, var(--c-pink), var(--c-purple));
+}
+.template-newsletter,
+.template-newsletter a {
   color: white;
 }

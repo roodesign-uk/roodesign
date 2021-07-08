@@ -27,6 +27,18 @@ sections:
           listable: hidden
       -
         import: content
+      -
+        handle: clients
+        field:
+          mode: grid
+          container: assets
+          folder: clients
+          restrict: true
+          allow_uploads: false
+          display: Clients
+          type: assets
+          icon: assets
+          listable: hidden
   sidebar:
     display: Sidebar
     fields:

@@ -1,10 +1,16 @@
 <div class="showcase">
   <h1 class="type-mega showcase-title">{{ title }}</h1>
   <img src="{{ hero }}" class="showcase-image" aria-hidden="true" role="presentation" alt="An illustration of a thinking person, their brain fizzing with ideas."/>
-  <div class="showcase-content prose prose--reverse prose--flow space--margin-top-s">
+  <div class="showcase-content prose prose--reverse contain-line-length space--margin-top-s">
     {{ partial:content }}
   </div>
 </div>
+
+<ul class="clients space--margin-top-xxl">
+  {{ clients }}
+  <li><img src="{{ url }}" alt="{{ alt }}" class="client-image"/></li>
+  {{ /clients }}
+</ul>
 
 <h2 class="space--margin-top-xxl">Featured work</h2>
 <ul class="list list--grid space--margin-top-m">

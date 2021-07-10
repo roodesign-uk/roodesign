@@ -1,1 +1,1 @@
-<a href="{{ link }}" class="button">{{ title | smartypants }}</a>
+<a href="{{ link }}" class="button" {{ if fathom_event }}data-fathom-event="{{ fathom_event }}"{{ /if }}>{{ title | smartypants }}</a>
